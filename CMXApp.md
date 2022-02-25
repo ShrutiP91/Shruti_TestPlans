@@ -163,15 +163,15 @@ Intel® Smart Edge Open Node
     --------Succesfuly installed prerequisites--------
     All dependencies met
     -------------------SYSTEM INFO--------------------
-    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
+    Package Name: Intelligent Connection Management for Automated Handover 2.0.0
     Product Name: Dell Inc. PowerEdge R750
     CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
     Memory Size: 504 GB
     Operating System: Ubuntu 20.04 LTS
-    Kernel Version: 5.4.0-91-generic
+    Kernel Version: 5.13.0-27-generic
     Accelerator: None
     CPU Utilization: 1.2%
-    Available Disk Space: 1651 GB
+    Available Disk Space: 433 GB
     Starting installation
     Downloading modules...
     Downloading component esb_common
