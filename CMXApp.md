@@ -1685,9 +1685,9 @@ Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automate
 	
 Step 5. Download the python package from the below repo
 
-       ```shell
-       git clone https://github.com/intel-innersource/networking.wireless.oran-ric.xapp-icmah/blob/master/ORAN_sim_ONF/latest.py
-       ```
+      ```shell
+      git clone https://github.com/intel-innersource/networking.wireless.oran-ric.xapp-icmah/blob/master/ORAN_sim_ONF/latest.py
+      ```
 Step 6. Verify the CMxApp pod status with the command below
 	
   ```shell
