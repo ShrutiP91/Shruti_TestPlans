@@ -1497,7 +1497,7 @@ Note: Minimum active UE number should be 50 and maximum number of UE 100 or 150.
 Python file will store the numbers and when we run latest.py, it will plot a graphs to verify Handover request processing time.
 
     ```shell	
-     smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp:$ python3 latest.py
+    smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp:$ python3 latest.py
     ```		
    ![image](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/b08d04c7-872d-4408-a709-a5cf8a575e12)
 
@@ -1525,7 +1525,7 @@ Note: For verifying latency measurement for python method, need to modify the pa
 
         ```shell
         ./edgesoftware uninstall -a 
-       ```
+        ```
 ```shell
 smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/Intelligent_Connection_Management$ ./edgesoftware uninstall -a
 Components to be uninstalled are :['Intelligent_Connection_Management_for_Automated_Handover']
