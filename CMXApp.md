@@ -1686,7 +1686,7 @@ Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automate
 Step 5. Download the python package from the below repo
 
       ```shell
-      git clone https://github.com/intel-innersource/networking.wireless.oran-ric.xapp-icmah/blob/master/ORAN_sim_ONF/latest.py
+       git clone https://github.com/intel-innersource/networking.wireless.oran-ric.xapp-icmah/blob/master/ORAN_sim_ONF/latest.py
       ```
 Step 6. Verify the CMxApp pod status with the command below
 	
@@ -1706,7 +1706,7 @@ Step 7. Verify  Handover request processing time with CMxApp and RAN simulator p
    Note: Minimum active UE number should be 50 and maximum number of UE 100. The total running time will be more than 4 hours and 99% the total Handover request processing time should be less than  0.1 to 0.15 seconds. 
          
   ```shell
-    smartedge-open@ubuntu-4b70b7ba43:~$ kubectl logs cm-xapp-6d99d58b5-2l4t2 -n smartedge-apps -c cm-xapp
+  smartedge-open@ubuntu-4b70b7ba43:~$ kubectl logs cm-xapp-6d99d58b5-2l4t2 -n smartedge-apps -c cm-xapp
   ```
 ```shell
 02/24/2022 11:00:40 AM Number of Cells: 7
