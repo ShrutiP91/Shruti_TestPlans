@@ -145,19 +145,19 @@ Intel® Smart Edge Open Node
 
 5. During the installation, user shall be prompted for the Product Key. The Product Key is contained in the email you received from Intel confirming your download.
  
-    ```shell
-    smartedge-open@ubuntu-4b70b7ba43:~/Intelligent_Connection_Management$ ./edgesoftware install
-    Please enter the Product Key. The Product Key is contained in the email you received from Intel confirming your download:  <Product Key>
-    Starting the setup...
-    ESB CLI version: 2021.4
-    Target OS: Ubuntu 20.04
-    Python version: 3.8.10
-    Checking Internet connection
-    Connected to the Internet
-    Validating product key
-    Successfully validated Product Key
-    Checking for prerequisites
-    ```
+	```shell
+	smartedge-open@ubuntu-4b70b7ba43:~/Intelligent_Connection_Management$ ./edgesoftware install
+	Please enter the Product Key. The Product Key is contained in the email you received from Intel confirming your download:  <Product Key>
+	Starting the setup...
+	ESB CLI version: 2021.4
+	Target OS: Ubuntu 20.04
+	Python version: 3.8.10
+	Checking Internet connection
+	Connected to the Internet
+	Validating product key
+	Successfully validated Product Key
+	Checking for prerequisites
+	```
 
         ```shell
 	--------Succesfuly installed prerequisites--------
