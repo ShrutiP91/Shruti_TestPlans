@@ -1526,36 +1526,34 @@ Note: For verifying latency measurement for python method, need to modify the pa
 ```shell
 ./edgesoftware uninstall -a
 ```
-	```shell	
-	smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/Intelligent_Connection_Management$ ./edgesoftware uninstall -a
-	Components to be uninstalled are :['Intelligent_Connection_Management_for_Automated_Handover']
-	Uninstalling Intelligent_Connection_Management_for_Automated_Handover
-	Uninstalling CM Xapp This might take upto 5 minutes.
-	Cleaning up CM Xapp                                [............                                      ]  25%
-	Successfully removed cm xapp from machine
-	Cleaning up CM Xapp                                [.........................                         ]  50%  00:00:11
-	Successfully removed sdran from machine
-	Cleaning up CM Xapp                                [.....................................             ]  75%  00:00:07
-	Successfully removed network policy from machine
-	Cleaning up CM Xapp                                [..................................................] 100%
-	Successfully uninstalled Intelligent_Connection_Management_for_Automated_Handover took 30.87 seconds
-	Uninstall Finished
-	+--------------------------+----------------------------------------------------------+---------+
-	|            Id            |                          Module                          |  Status |
-	+--------------------------+----------------------------------------------------------+---------+
-	| 61d80982d534850021b1422d | Intelligent Connection Management for Automated Handover | SUCCESS |
-	+--------------------------+----------------------------------------------------------+---------+
-	```
+```shell	
+smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/Intelligent_Connection_Management$ ./edgesoftware uninstall -a
+Components to be uninstalled are :['Intelligent_Connection_Management_for_Automated_Handover']
+Uninstalling Intelligent_Connection_Management_for_Automated_Handover
+Uninstalling CM Xapp This might take upto 5 minutes.
+Cleaning up CM Xapp                                [............                                      ]  25%
+Successfully removed cm xapp from machine
+Cleaning up CM Xapp                                [.........................                         ]  50%  00:00:11
+Successfully removed sdran from machine
+Cleaning up CM Xapp                                [.....................................             ]  75%  00:00:07
+Successfully removed network policy from machine
+Cleaning up CM Xapp                                [..................................................] 100%
+Successfully uninstalled Intelligent_Connection_Management_for_Automated_Handover took 30.87 seconds
+Uninstall Finished
++--------------------------+----------------------------------------------------------+---------+
+|            Id            |                          Module                          |  Status |
++--------------------------+----------------------------------------------------------+---------+
+| 61d80982d534850021b1422d | Intelligent Connection Management for Automated Handover | SUCCESS |
++--------------------------+----------------------------------------------------------+---------+
+```
    
 Step 2. Set the following parameters from below path
-	
-        ```shell
-        Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automated_Handover_2.0.0/Intelligent_Connection_Management_for_Automated_Handover/CM-Xapp/cm- xapp/values.yaml
-        ```
-    
-        ```shell	
-        -parallelLoop=false --qValue=0 --preprocessing=true 
-        ```
+```shell
+Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automated_Handover_2.0.0/Intelligent_Connection_Management_for_Automated_Handover/CM-Xapp/cm- xapp/values.yaml
+```
+```shell	
+parallelLoop=false --qValue=0 --preprocessing=true 
+```
 	
 **Step 3 : Reinstall the Intelligent Connection Management for Automated Handover RI with valid product key **.
 
