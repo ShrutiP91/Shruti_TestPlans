@@ -145,7 +145,7 @@ Intel® Smart Edge Open Node
 
 5. During the installation, user shall be prompted for the Product Key. The Product Key is contained in the email you received from Intel confirming your download.
  
-	 ```shell
+    ```shell
     smartedge-open@ubuntu-4b70b7ba43:~/Intelligent_Connection_Management$ ./edgesoftware install
     Please enter the Product Key. The Product Key is contained in the email you received from Intel confirming your download:  <Product-Key>
     Starting the setup...
@@ -163,15 +163,15 @@ Intel® Smart Edge Open Node
     --------Succesfuly installed prerequisites--------
     All dependencies met
     -------------------SYSTEM INFO--------------------
-    Package Name: Intelligent Connection Management for Automated Handover 2.0.0
+    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
     Product Name: Dell Inc. PowerEdge R750
     CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
     Memory Size: 504 GB
     Operating System: Ubuntu 20.04 LTS
-    Kernel Version: 5.13.0-27-generic
+    Kernel Version: 5.4.0-91-generic
     Accelerator: None
     CPU Utilization: 1.2%
-    Available Disk Space: 433 GB
+    Available Disk Space: 1651 GB
     Starting installation
     Downloading modules...
     Downloading component esb_common
@@ -259,7 +259,6 @@ Intel® Smart Edge Open Node
     | 619b8bceff6f230021e4409e | Intelligent Connection Management for Automated Handover | SUCCESS |
     +--------------------------+----------------------------------------------------------+---------+
     ```
-
     **Note:** Installation logs are available at path: /var/log/esb-cli/Intelligent_Connection_Management_for_Automated_Handover_1.0.0/Intelligent_Connection_Management_for_Automated_Handover/install.log
 
 9. If Intel® Smart Edge Open Developer Experience Kit is installed successfully along with the RI, running the following command should show output similar to the example below. All the pods should be either in the 'Running' or 'Completed' stage. 
@@ -752,7 +751,7 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
   
     ```shell
     smartedge-open@ubuntu-4b70b7ba43:~/Intelligent_Connection_Management$ ./edgesoftware install
-    Please enter the Product Key. The Product Key is contained in the email you received from Intel confirming your download:  <Product Key>
+    Please enter the Product Key. The Product Key is contained in the email you received from Intel confirming your download:  <Valid Product Key>
     Starting the setup...
     ESB CLI version: 2021.4
     Target OS: Ubuntu 20.04
@@ -762,52 +761,44 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
     Validating product key
     Successfully validated Product Key
     Checking for prerequisites
-    ```
-    ```shell
-    --------Succesfuly installed prerequisites--------
+    W: Target CNF (multiverse/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list:48 and /etc/apt/sources.list.d/security_ubuntu_
+    com_ubuntu.list:3
     All dependencies met
     -------------------SYSTEM INFO--------------------
-    Package Name: Intelligent Connection Management for Automated Handover 2.0.0
+    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
     Product Name: Dell Inc. PowerEdge R750
     CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
     Memory Size: 504 GB
     Operating System: Ubuntu 20.04 LTS
-    Kernel Version: 5.13.0-27-generic
+    Kernel Version: 5.4.0-91-generic
     Accelerator: None
-    CPU Utilization: 1.2%
-    Available Disk Space: 433 GB
+    CPU Utilization: 1.5%
+    Available Disk Space: 1649 GB
     Starting installation
     Downloading modules...
     Downloading component esb_common
-    100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 44.0M/44.0M [00:43<00:00, 1.01MiB/s]
+    ZIP file for module 6022bd8ccc7449002afdbedd already exists. Validating it...
     Module validation passed for 6022bd8ccc7449002afdbedd
-    Successfully downloaded module esb_common
+    Skipping download...
     Downloading component Intelligent_Connection_Management_for_Automated_Handover
-    100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 1.95M/1.95M [00:02<00:00, 951kiB/s]
+    ZIP file for module 619b8bceff6f230021e4409e already exists. Validating it...
     Module validation passed for 619b8bceff6f230021e4409e
-    Successfully downloaded module Intelligent_Connection_Management_for_Automated_Handover
+    Skipping download...
     Downloading modules completed...
     Installing shared module 'esb_common'
     Unzipping the shared module 'esb_common'...
     running install
     running bdist_egg
     running egg_info
-    creating esb_common.egg-info
     writing esb_common.egg-info/PKG-INFO
     writing dependency_links to esb_common.egg-info/dependency_links.txt
     writing top-level names to esb_common.egg-info/top_level.txt
-    writing manifest file 'esb_common.egg-info/SOURCES.txt'
     reading manifest file 'esb_common.egg-info/SOURCES.txt'
     writing manifest file 'esb_common.egg-info/SOURCES.txt'
     installing library code to build/bdist.linux-x86_64/egg
     running install_lib
     warning: install_lib: 'build/lib' does not exist -- no Python modules to install
-    ```
 
-
- ```shell
-    creating build
-    creating build/bdist.linux-x86_64
     creating build/bdist.linux-x86_64/egg
     creating build/bdist.linux-x86_64/egg/EGG-INFO
     copying esb_common.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
@@ -815,20 +806,17 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
     copying esb_common.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
     copying esb_common.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
     zip_safe flag not set; analyzing archive contents...
-    creating dist
     creating 'dist/esb_common-0.1-py3.8.egg' and adding 'build/bdist.linux-x86_64/egg' to it
     removing 'build/bdist.linux-x86_64/egg' (and everything under it)
     Processing esb_common-0.1-py3.8.egg
+    Removing /usr/local/lib/python3.8/dist-packages/esb_common-0.1-py3.8.egg
     Copying esb_common-0.1-py3.8.egg to /usr/local/lib/python3.8/dist-packages
-    Adding esb-common 0.1 to easy-install.pth file
+    esb-common 0.1 is already the active version in easy-install.pth
 
     Installed /usr/local/lib/python3.8/dist-packages/esb_common-0.1-py3.8.egg
     Processing dependencies for esb-common==0.1
     Finished processing dependencies for esb-common==0.1
     Successfully installed shared module 'esb_common'.
-    Installing Lanternrock SDK
-    Successfully installed Lanternrock SDK.
-    Unzipping the module Intelligent_Connection_Management_for_Automated_Handover...
     Modules to be installed by package are ['Intelligent_Connection_Management_for_Automated_Handover']
     Installing Intelligent_Connection_Management_for_Automated_Handover
     Verifying SE Node (xx.xxx.xxx.xxx)                  [..................................................] 100%
@@ -837,27 +825,20 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
     Before installing freshly, deleting partially installed pods if any ...
     Uninstalling CM Xapp This might take upto 5 minutes.
     Cleaning up CM Xapp quietly                        [..................................................] 100%
-    ```
 
-6. During the installation, user shall be prompted to enter username and password for ONF portal to download SDRAN helm chart.
 
-    ```shell
     Please contact ONF(https://opennetworking.org/contact/) for username and password credentials that allow access to the sdran helm chart repo.
     Enter sdran username: intel
-    Enter sdran password: <ONF Password>
+    Enter sdran password:
     Installing CM Xapp dependencies on SE Node . . .   [..................................................] 100%
     Successfully installed: SDRAN
-    ```
-  
-8. When the installation is complete, you shall see the message **Installation of package complete** with the installation status for each module.
 
-    ```shell
     CM Xapp installation started. This might take upto 1 mins
     Installing CM Xapp                                 [..................................................] 100%
     Successfully installed: CM Xapp
 
     Verifying CM Xapp installation in (xx.xxx.xxx.xxx)  [..................................................] 100%
-    Successfully installed Intelligent_Connection_Management_for_Automated_Handover took 13 minutes 58.31 seconds
+    Successfully installed Intelligent_Connection_Management_for_Automated_Handover took 4 minutes 0.25 seconds
     Installation of package complete
     ***Recommended to reboot system after installation***
     +--------------------------+----------------------------------------------------------+---------+
@@ -865,6 +846,8 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
     +--------------------------+----------------------------------------------------------+---------+
     | 619b8bceff6f230021e4409e | Intelligent Connection Management for Automated Handover | SUCCESS |
     +--------------------------+----------------------------------------------------------+---------+
+    ```
+
 3. Verify the installation with commands below
 
     ```shell
@@ -962,9 +945,10 @@ Intelligent Connection Management for Automated Handover RI Installation should 
 
 1. During the installation, user shall be prompted for the Product Key. Enter invalid Product key and verify the installation fails with error as below.
 
-     ```shell
-    smartedge-open@ubuntu-4b70b7ba43:~/Intelligent_Connection_Management$ ./edgesoftware install
-    Please enter the Product Key. The Product Key is contained in the email you received from Intel confirming your download:  <Product Key>
+    ```shell
+    smartedge-open@ubuntu-c1c5dc0185:~/Intelligent_Connection_Management$ ./edgesoftware install
+    Please enter the Product Key. The Product Key is contained in the email you received from Intel confirming your download:  12345678-1234-4321-098
+    765432112
     Starting the setup...
     ESB CLI version: 2021.4
     Target OS: Ubuntu 20.04
@@ -972,36 +956,31 @@ Intelligent Connection Management for Automated Handover RI Installation should 
     Checking Internet connection
     Connected to the Internet
     Validating product key
-    Successfully validated Product Key
+    [WARNING] Invalid Product Key. Continuing installation with local files
     Checking for prerequisites
     ```
-
- ```shell
- --------Succesfuly installed prerequisites--------
- All dependencies met
--------------------SYSTEM INFO--------------------
-Package Name: Intelligent Connection Management for Automated Handover 2.0.0
-Product Name: Dell Inc. PowerEdge R750
-CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
-Memory Size: 504 GB
-Operating System: Ubuntu 20.04.2 LTS
-Kernel Version: 5.13.0-27-generic
-Accelerator: None
-CPU Utilization: 1.1%
-Available Disk Space: 433 GB
-WARNING: Installation may fail. The target device does not meet the minimum system requirement.
-Minimum memory requirement for this package: 64 GB.
-Minimum disk requirement for this package: 512 GB.
-Starting installation
-Downloading modules...
-Downloading component esb_common
-Failed to download the module esb_common. 401 Unauthorized
-Downloading component Intelligent_Connection_Management_for_Automated_Handover
-Failed to download the module Intelligent_Connection_Management_for_Automated_Handover. 401 Unauthorized
-Downloading modules completed...
-Installing shared module 'esb_common'
-Failed to find shared module 'esb_common'. Exiting installation.
-```
+    ```shell
+    All dependencies met
+    -------------------SYSTEM INFO--------------------
+    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
+    Product Name: Dell Inc. PowerEdge R750
+    CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
+    Memory Size: 504 GB
+    Operating System: Ubuntu 20.04 LTS
+    Kernel Version: 5.4.0-91-generic
+    Accelerator: None
+    CPU Utilization: 1.5%
+    Available Disk Space: 1650 GB
+    Starting installation
+    Downloading modules...
+    Downloading component esb_common
+    Failed to download the module esb_common. 401 Unauthorized
+    Downloading component Intelligent_Connection_Management_for_Automated_Handover
+    Failed to download the module Intelligent_Connection_Management_for_Automated_Handover. 401 Unauthorized
+    Downloading modules completed...
+    Installing shared module 'esb_common'
+    Failed to find shared module 'esb_common'. Exiting installation.
+    ```
 
 ## ITP/RI/ICMAH/07: Verify reinstallation of Intelligent Connection Management for Automated Handover RI
   
@@ -1017,8 +996,8 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
   
 1. Re-install Intelligent Connection Management for Automated Handover RI again in the same node, after the previous installation is success.
 
-      ```shell
-    smartedge-open@ubuntu-4b70b7ba43:~/Intelligent_Connection_Management$ ./edgesoftware install
+    ```shell
+    smartedge-open@ubuntu-4b70b7ba43:~/Intelligent_Connection_Management$ ./edgesoftware install                                           [655/2000]
     Please enter the Product Key. The Product Key is contained in the email you received from Intel confirming your download:  <Product Key>
     Starting the setup...
     ESB CLI version: 2021.4
@@ -1029,33 +1008,22 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
     Validating product key
     Successfully validated Product Key
     Checking for prerequisites
-    ```
-
- ```shell
- --------Succesfuly installed prerequisites--------
- All dependencies met
--------------------SYSTEM INFO--------------------
-Package Name: Intelligent Connection Management for Automated Handover 2.0.0
-Product Name: Dell Inc. PowerEdge R750
-CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
-Memory Size: 504 GB
-Operating System: Ubuntu 20.04.2 LTS
-Kernel Version: 5.13.0-27-generic
-Accelerator: None
-CPU Utilization: 1.1%
-Available Disk Space: 433 GB
-WARNING: Installation may fail. The target device does not meet the minimum system requirement.
-Minimum memory requirement for this package: 64 GB.
-Minimum disk requirement for this package: 512 GB.
-Starting installation
-Downloading modules...
-Downloading component esb_common
-Failed to download the module esb_common. 401 Unauthorized
-Downloading component Intelligent_Connection_Management_for_Automated_Handover
-Failed to download the module Intelligent_Connection_Management_for_Automated_Handover. 401 Unauthorized
-Downloading modules completed...
-Installing shared module 'esb_common'
-Failed to find shared module 'esb_common'. Exiting installation.
+    ...
+    ...
+    All dependencies met
+    -------------------SYSTEM INFO--------------------
+    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
+    Product Name: Dell Inc. PowerEdge R750
+    CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
+    Memory Size: 504 GB
+    Operating System: Ubuntu 20.04 LTS
+    Kernel Version: 5.4.0-91-generic
+    Accelerator: None
+    CPU Utilization: 2.4%
+    Available Disk Space: 1648 GB
+    Starting installation
+    Downloading modules...
+    Downloading component esb_common
     ZIP file for module 6022bd8ccc7449002afdbedd already exists. Validating it...
     Module validation passed for 6022bd8ccc7449002afdbedd
     Skipping download...
@@ -1170,9 +1138,10 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
 
 1. Verify installation of ICMAH RI with product key of another RI.<br> Installation should fail displaying invalid product key.   
   
-     ```shell
-    smartedge-open@ubuntu-4b70b7ba43:~/Intelligent_Connection_Management$ ./edgesoftware install
-    Please enter the Product Key. The Product Key is contained in the email you received from Intel confirming your download:  <Product Key>
+    ```shell
+    smartedge-open@ubuntu-c1c5dc0185:~/Intelligent_Connection_Management$ ./edgesoftware install
+    Please enter the Product Key. The Product Key is contained in the email you received from Intel confirming your download:  8745563b-e7ae-4e43-8a3
+    6-0559c4258818
     Starting the setup...
     ESB CLI version: 2021.4
     Target OS: Ubuntu 20.04
@@ -1180,37 +1149,31 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
     Checking Internet connection
     Connected to the Internet
     Validating product key
-    Successfully validated Product Key
+    [WARNING] Invalid Product Key. Continuing installation with local files
     Checking for prerequisites
     ```
-
- ```shell
- --------Succesfuly installed prerequisites--------
- All dependencies met
--------------------SYSTEM INFO--------------------
-Package Name: Intelligent Connection Management for Automated Handover 2.0.0
-Product Name: Dell Inc. PowerEdge R750
-CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
-Memory Size: 504 GB
-Operating System: Ubuntu 20.04.2 LTS
-Kernel Version: 5.13.0-27-generic
-Accelerator: None
-CPU Utilization: 1.1%
-Available Disk Space: 433 GB
-WARNING: Installation may fail. The target device does not meet the minimum system requirement.
-Minimum memory requirement for this package: 64 GB.
-Minimum disk requirement for this package: 512 GB.
-Starting installation
-Downloading modules...
-Downloading component esb_common
-Failed to download the module esb_common. 401 Unauthorized
-Downloading component Intelligent_Connection_Management_for_Automated_Handover
-Failed to download the module Intelligent_Connection_Management_for_Automated_Handover. 401 Unauthorized
-Downloading modules completed...
-Installing shared module 'esb_common'
-Failed to find shared module 'esb_common'. Exiting installation.
-```
-
+    ```shell
+    All dependencies met
+    -------------------SYSTEM INFO--------------------
+    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
+    Product Name: Dell Inc. PowerEdge R750
+    CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
+    Memory Size: 504 GB
+    Operating System: Ubuntu 20.04 LTS
+    Kernel Version: 5.4.0-91-generic
+    Accelerator: None
+    CPU Utilization: 1.5%
+    Available Disk Space: 1650 GB
+    Starting installation
+    Downloading modules...
+    Downloading component esb_common
+    Failed to download the module esb_common. 401 Unauthorized
+    Downloading component Intelligent_Connection_Management_for_Automated_Handover
+    Failed to download the module Intelligent_Connection_Management_for_Automated_Handover. 401 Unauthorized
+    Downloading modules completed...
+    Installing shared module 'esb_common'
+    Failed to find shared module 'esb_common'. Exiting installation.
+    ```
 
 ## ITP/RI/ICMAH/09: Verify uninstall and install of ICMAH RI with an invalid product key
   
@@ -1605,9 +1568,9 @@ Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automate
 
 2. During the installation, user shall be prompted for the Product Key. The Product Key is contained in the email you received from Intel confirming your download.
  
-     ```shell
+    ```shell
     smartedge-open@ubuntu-4b70b7ba43:~/Intelligent_Connection_Management$ ./edgesoftware install
-    Please enter the Product Key. The Product Key is contained in the email you received from Intel confirming your download:  <Product Key>
+    Please enter the Product Key. The Product Key is contained in the email you received from Intel confirming your download:  <Product-Key>
     Starting the setup...
     ESB CLI version: 2021.4
     Target OS: Ubuntu 20.04
@@ -1619,112 +1582,106 @@ Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automate
     Checking for prerequisites
     ```
 
- ```shell
- --------Succesfuly installed prerequisites--------
- All dependencies met
--------------------SYSTEM INFO--------------------
-Package Name: Intelligent Connection Management for Automated Handover 2.0.0
-Product Name: Dell Inc. PowerEdge R750
-CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
-Memory Size: 504 GB
-Operating System: Ubuntu 20.04.2 LTS
-Kernel Version: 5.13.0-27-generic
-Accelerator: None
-CPU Utilization: 1.1%
-Available Disk Space: 433 GB
-WARNING: Installation may fail. The target device does not meet the minimum system requirement.
-Minimum memory requirement for this package: 64 GB.
-Minimum disk requirement for this package: 512 GB.
-Starting installation
-Downloading modules...
-Downloading component esb_common
-100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 44.0M/44.0M [00:01<00:00, 23.4MiB/s]
-Module validation passed for 6022bd8ccc7449002afdbedd
-Successfully downloaded module esb_common
-Downloading component Intelligent_Connection_Management_for_Automated_Handover
-100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3.76M/3.76M [00:06<00:00, 588kiB/s]
-Module validation passed for 61d80982d534850021b1422d
-Successfully downloaded module Intelligent_Connection_Management_for_Automated_Handover
-Downloading modules completed...
-Installing shared module 'esb_common'
-Unzipping the shared module 'esb_common'...
-running install
-running bdist_egg
-running egg_info
-creating esb_common.egg-info
-writing esb_common.egg-info/PKG-INFO
-writing dependency_links to esb_common.egg-info/dependency_links.txt
-writing top-level names to esb_common.egg-info/top_level.txt
-writing manifest file 'esb_common.egg-info/SOURCES.txt'
-reading manifest file 'esb_common.egg-info/SOURCES.txt'
-writing manifest file 'esb_common.egg-info/SOURCES.txt'
-installing library code to build/bdist.linux-x86_64/egg
-running install_lib
-warning: install_lib: 'build/lib' does not exist -- no Python modules to install
-```
+    ```shell
+    --------Succesfuly installed prerequisites--------
+    All dependencies met
+    -------------------SYSTEM INFO--------------------
+    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
+    Product Name: Dell Inc. PowerEdge R750
+    CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
+    Memory Size: 504 GB
+    Operating System: Ubuntu 20.04 LTS
+    Kernel Version: 5.4.0-91-generic
+    Accelerator: None
+    CPU Utilization: 1.2%
+    Available Disk Space: 1651 GB
+    Starting installation
+    Downloading modules...
+    Downloading component esb_common
+    100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 44.0M/44.0M [00:43<00:00, 1.01MiB/s]
+    Module validation passed for 6022bd8ccc7449002afdbedd
+    Successfully downloaded module esb_common
+    Downloading component Intelligent_Connection_Management_for_Automated_Handover
+    100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 1.95M/1.95M [00:02<00:00, 951kiB/s]
+    Module validation passed for 619b8bceff6f230021e4409e
+    Successfully downloaded module Intelligent_Connection_Management_for_Automated_Handover
+    Downloading modules completed...
+    Installing shared module 'esb_common'
+    Unzipping the shared module 'esb_common'...
+    running install
+    running bdist_egg
+    running egg_info
+    creating esb_common.egg-info
+    writing esb_common.egg-info/PKG-INFO
+    writing dependency_links to esb_common.egg-info/dependency_links.txt
+    writing top-level names to esb_common.egg-info/top_level.txt
+    writing manifest file 'esb_common.egg-info/SOURCES.txt'
+    reading manifest file 'esb_common.egg-info/SOURCES.txt'
+    writing manifest file 'esb_common.egg-info/SOURCES.txt'
+    installing library code to build/bdist.linux-x86_64/egg
+    ```
 
-```shell
-creating build
-creating build/bdist.linux-x86_64
-creating build/bdist.linux-x86_64/egg
-creating build/bdist.linux-x86_64/egg/EGG-INFO
-copying esb_common.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
-copying esb_common.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
-copying esb_common.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
-copying esb_common.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
-zip_safe flag not set; analyzing archive contents...
-creating dist
-creating 'dist/esb_common-0.1-py3.8.egg' and adding 'build/bdist.linux-x86_64/egg' to it
-removing 'build/bdist.linux-x86_64/egg' (and everything under it)
-Processing esb_common-0.1-py3.8.egg
-Copying esb_common-0.1-py3.8.egg to /usr/local/lib/python3.8/dist-packages
-Adding esb-common 0.1 to easy-install.pth file
+    ```shell
+    creating build
+    creating build/bdist.linux-x86_64
+    creating build/bdist.linux-x86_64/egg
+    creating build/bdist.linux-x86_64/egg/EGG-INFO
+    copying esb_common.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+    copying esb_common.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+    copying esb_common.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+    copying esb_common.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+    zip_safe flag not set; analyzing archive contents...
+    creating dist
+    creating 'dist/esb_common-0.1-py3.8.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+    removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+    Processing esb_common-0.1-py3.8.egg
+    Copying esb_common-0.1-py3.8.egg to /usr/local/lib/python3.8/dist-packages
+    Adding esb-common 0.1 to easy-install.pth file
 
-Installed /usr/local/lib/python3.8/dist-packages/esb_common-0.1-py3.8.egg
-Processing dependencies for esb-common==0.1
-Finished processing dependencies for esb-common==0.1
-Successfully installed shared module 'esb_common'.
-Installing Lanternrock SDK
-Successfully installed Lanternrock SDK.
-Unzipping the module Intelligent_Connection_Management_for_Automated_Handover...
-Modules to be installed by package are ['Intelligent_Connection_Management_for_Automated_Handover']
-Installing Intelligent_Connection_Management_for_Automated_Handover
-Verifying SE Node (xx.xx.xxx.xxx)                  [..................................................] 100%
+    Installed /usr/local/lib/python3.8/dist-packages/esb_common-0.1-py3.8.egg
+    Processing dependencies for esb-common==0.1
+    Finished processing dependencies for esb-common==0.1
+    Successfully installed shared module 'esb_common'.
+    Installing Lanternrock SDK
+    Successfully installed Lanternrock SDK.
+    Unzipping the module Intelligent_Connection_Management_for_Automated_Handover...
+    Modules to be installed by package are ['Intelligent_Connection_Management_for_Automated_Handover']
+    Installing Intelligent_Connection_Management_for_Automated_Handover
+    Verifying SE Node (xx.xxx.xxx.xxx)                  [..................................................] 100%
 
 
-Before installing freshly, deleting partially installed pods if any ...
-Uninstalling CM Xapp This might take upto 5 minutes.
-Cleaning up CM Xapp quietly                        [..................................................] 100%
+    Before installing freshly, deleting partially installed pods if any ...
+    Uninstalling CM Xapp This might take upto 5 minutes.
+    Cleaning up CM Xapp quietly                        [..................................................] 100%
+    ```
 
-```
+3. During the installation, user shall be prompted to enter username and password for ONF portal to download SDRAN helm chart.
 
-6. During the installation, user shall be prompted to enter username and password for ONF portal to download SDRAN helm chart.
-
- ```shell
-Please contact ONF(https://opennetworking.org/contact/) for username and password credentials that allow access to the sdran helm chart repo.
-Enter sdran username: intel
-Enter sdran password:
-Installing CM Xapp dependencies on SE Node . . .   [..........................................        ]  84%  00:00:17
-Successfully installed: SDRAN
-```
+    ```shell
+    Please contact ONF(https://opennetworking.org/contact/) for username and password credentials that allow access to the sdran helm chart repo.
+    Enter sdran username: intel
+    Enter sdran password: <ONF Password>
+    Installing CM Xapp dependencies on SE Node . . .   [..................................................] 100%
+    Successfully installed: SDRAN
+    ```
   
-8. When the installation is complete, you shall see the message **Installation of package complete** with the installation status for each module.
+4. When the installation is complete, you shall see the message **Installation of package complete** with the installation status for each module.
 
- ```shell
-CM Xapp installation started. This might take upto 5-10 mins for getting docker images from registry
-Installing CM Xapp                                 [..................................................] 100%
-Successfully installed: CM Xapp
+    ```shell
+    CM Xapp installation started. This might take upto 1 mins
+    Installing CM Xapp                                 [..................................................] 100%
+    Successfully installed: CM Xapp
 
-Verifying CM Xapp installation in (xx.xx.xxx.xxx)  [..................................................] 100%
-Successfully installed Intelligent_Connection_Management_for_Automated_Handover took 4 minutes 0.73 seconds
-Installation of package complete
-***Recommended to reboot system after installation***
-+--------------------------+----------------------------------------------------------+---------+
-|            Id            |                          Module                          |  Status |
-+--------------------------+----------------------------------------------------------+---------+
-| 61d80982d534850021b1422d | Intelligent Connection Management for Automated Handover | SUCCESS |
-+--------------------------+----------------------------------------------------------+---------+
-```
+    Verifying CM Xapp installation in (xx.xxx.xxx.xxx)  [..................................................] 100%
+    Successfully installed Intelligent_Connection_Management_for_Automated_Handover took 13 minutes 58.31 seconds
+    Installation of package complete
+    ***Recommended to reboot system after installation***
+    +--------------------------+----------------------------------------------------------+---------+
+    |            Id            |                          Module                          |  Status |
+    +--------------------------+----------------------------------------------------------+---------+
+    | 619b8bceff6f230021e4409e | Intelligent Connection Management for Automated Handover | SUCCESS |
+    +--------------------------+----------------------------------------------------------+---------+
+    ```
 **Note:** Installation logs are available at path: /var/log/esb-cli/Intelligent_Connection_Management_for_Automated_Handover_1.0.0/Intelligent_Connection_Management_for_Automated_Handover/install.log
 	
 Step 5. Download the python package from the below repo
