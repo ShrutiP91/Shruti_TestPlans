@@ -1705,10 +1705,8 @@ Step 7. Verify  Handover request processing time with CMxApp and RAN simulator p
 
    Note: Minimum active UE number should be 50 and maximum number of UE 100. The total running time will be more than 4 hours and 99% the total Handover request processing time should be less than  0.1 to 0.15 seconds. 
          
-  ```shell
-  smartedge-open@ubuntu-4b70b7ba43:~$ kubectl logs cm-xapp-6d99d58b5-2l4t2 -n smartedge-apps -c cm-xapp
-  ```
 ```shell
+smartedge-open@ubuntu-4b70b7ba43:~$ kubectl logs cm-xapp-6d99d58b5-2l4t2 -n smartedge-apps -c cm-xapp
 02/24/2022 11:00:40 AM Number of Cells: 7
 02/24/2022 11:00:40 AM Queue len: 19
 02/24/2022 11:00:40 AM Calling control req no 1 for UE : 2852134 Serving cell: 13842601454c001 target_cell 13842601454c002
