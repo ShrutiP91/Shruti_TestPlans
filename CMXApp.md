@@ -763,113 +763,108 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
     Successfully validated Product Key
     Checking for prerequisites
     ```
+    ```shell
+    --------Succesfuly installed prerequisites--------
+    All dependencies met
+    -------------------SYSTEM INFO--------------------
+    Package Name: Intelligent Connection Management for Automated Handover 2.0.0
+    Product Name: Dell Inc. PowerEdge R750
+    CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
+    Memory Size: 504 GB
+    Operating System: Ubuntu 20.04 LTS
+    Kernel Version: 5.13.0-27-generic
+    Accelerator: None
+    CPU Utilization: 1.2%
+    Available Disk Space: 433 GB
+    Starting installation
+    Downloading modules...
+    Downloading component esb_common
+    100%|██████████████████████████████████████████████████████████████████████████████████████████████████████| 44.0M/44.0M [00:43<00:00, 1.01MiB/s]
+    Module validation passed for 6022bd8ccc7449002afdbedd
+    Successfully downloaded module esb_common
+    Downloading component Intelligent_Connection_Management_for_Automated_Handover
+    100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 1.95M/1.95M [00:02<00:00, 951kiB/s]
+    Module validation passed for 619b8bceff6f230021e4409e
+    Successfully downloaded module Intelligent_Connection_Management_for_Automated_Handover
+    Downloading modules completed...
+    Installing shared module 'esb_common'
+    Unzipping the shared module 'esb_common'...
+    running install
+    running bdist_egg
+    running egg_info
+    creating esb_common.egg-info
+    writing esb_common.egg-info/PKG-INFO
+    writing dependency_links to esb_common.egg-info/dependency_links.txt
+    writing top-level names to esb_common.egg-info/top_level.txt
+    writing manifest file 'esb_common.egg-info/SOURCES.txt'
+    reading manifest file 'esb_common.egg-info/SOURCES.txt'
+    writing manifest file 'esb_common.egg-info/SOURCES.txt'
+    installing library code to build/bdist.linux-x86_64/egg
+    running install_lib
+    warning: install_lib: 'build/lib' does not exist -- no Python modules to install
+    ```
+
 
  ```shell
- --------Succesfuly installed prerequisites--------
- All dependencies met
--------------------SYSTEM INFO--------------------
-Package Name: Intelligent Connection Management for Automated Handover 2.0.0
-Product Name: Dell Inc. PowerEdge R750
-CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
-Memory Size: 504 GB
-Operating System: Ubuntu 20.04.2 LTS
-Kernel Version: 5.13.0-27-generic
-Accelerator: None
-CPU Utilization: 1.1%
-Available Disk Space: 433 GB
-WARNING: Installation may fail. The target device does not meet the minimum system requirement.
-Minimum memory requirement for this package: 64 GB.
-Minimum disk requirement for this package: 512 GB.
-Starting installation
-Downloading modules...
-Downloading component esb_common
-100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████| 44.0M/44.0M [00:01<00:00, 23.4MiB/s]
-Module validation passed for 6022bd8ccc7449002afdbedd
-Successfully downloaded module esb_common
-Downloading component Intelligent_Connection_Management_for_Automated_Handover
-100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3.76M/3.76M [00:06<00:00, 588kiB/s]
-Module validation passed for 61d80982d534850021b1422d
-Successfully downloaded module Intelligent_Connection_Management_for_Automated_Handover
-Downloading modules completed...
-Installing shared module 'esb_common'
-Unzipping the shared module 'esb_common'...
-running install
-running bdist_egg
-running egg_info
-creating esb_common.egg-info
-writing esb_common.egg-info/PKG-INFO
-writing dependency_links to esb_common.egg-info/dependency_links.txt
-writing top-level names to esb_common.egg-info/top_level.txt
-writing manifest file 'esb_common.egg-info/SOURCES.txt'
-reading manifest file 'esb_common.egg-info/SOURCES.txt'
-writing manifest file 'esb_common.egg-info/SOURCES.txt'
-installing library code to build/bdist.linux-x86_64/egg
-running install_lib
-warning: install_lib: 'build/lib' does not exist -- no Python modules to install
-```
+    creating build
+    creating build/bdist.linux-x86_64
+    creating build/bdist.linux-x86_64/egg
+    creating build/bdist.linux-x86_64/egg/EGG-INFO
+    copying esb_common.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+    copying esb_common.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+    copying esb_common.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+    copying esb_common.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+    zip_safe flag not set; analyzing archive contents...
+    creating dist
+    creating 'dist/esb_common-0.1-py3.8.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+    removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+    Processing esb_common-0.1-py3.8.egg
+    Copying esb_common-0.1-py3.8.egg to /usr/local/lib/python3.8/dist-packages
+    Adding esb-common 0.1 to easy-install.pth file
 
-```shell
-creating build
-creating build/bdist.linux-x86_64
-creating build/bdist.linux-x86_64/egg
-creating build/bdist.linux-x86_64/egg/EGG-INFO
-copying esb_common.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
-copying esb_common.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
-copying esb_common.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
-copying esb_common.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
-zip_safe flag not set; analyzing archive contents...
-creating dist
-creating 'dist/esb_common-0.1-py3.8.egg' and adding 'build/bdist.linux-x86_64/egg' to it
-removing 'build/bdist.linux-x86_64/egg' (and everything under it)
-Processing esb_common-0.1-py3.8.egg
-Copying esb_common-0.1-py3.8.egg to /usr/local/lib/python3.8/dist-packages
-Adding esb-common 0.1 to easy-install.pth file
-
-Installed /usr/local/lib/python3.8/dist-packages/esb_common-0.1-py3.8.egg
-Processing dependencies for esb-common==0.1
-Finished processing dependencies for esb-common==0.1
-Successfully installed shared module 'esb_common'.
-Installing Lanternrock SDK
-Successfully installed Lanternrock SDK.
-Unzipping the module Intelligent_Connection_Management_for_Automated_Handover...
-Modules to be installed by package are ['Intelligent_Connection_Management_for_Automated_Handover']
-Installing Intelligent_Connection_Management_for_Automated_Handover
-Verifying SE Node (xx.xx.xxx.xxx)                  [..................................................] 100%
+    Installed /usr/local/lib/python3.8/dist-packages/esb_common-0.1-py3.8.egg
+    Processing dependencies for esb-common==0.1
+    Finished processing dependencies for esb-common==0.1
+    Successfully installed shared module 'esb_common'.
+    Installing Lanternrock SDK
+    Successfully installed Lanternrock SDK.
+    Unzipping the module Intelligent_Connection_Management_for_Automated_Handover...
+    Modules to be installed by package are ['Intelligent_Connection_Management_for_Automated_Handover']
+    Installing Intelligent_Connection_Management_for_Automated_Handover
+    Verifying SE Node (xx.xxx.xxx.xxx)                  [..................................................] 100%
 
 
-Before installing freshly, deleting partially installed pods if any ...
-Uninstalling CM Xapp This might take upto 5 minutes.
-Cleaning up CM Xapp quietly                        [..................................................] 100%
-
-```
+    Before installing freshly, deleting partially installed pods if any ...
+    Uninstalling CM Xapp This might take upto 5 minutes.
+    Cleaning up CM Xapp quietly                        [..................................................] 100%
+    ```
 
 6. During the installation, user shall be prompted to enter username and password for ONF portal to download SDRAN helm chart.
 
- ```shell
-Please contact ONF(https://opennetworking.org/contact/) for username and password credentials that allow access to the sdran helm chart repo.
-Enter sdran username: intel
-Enter sdran password:
-Installing CM Xapp dependencies on SE Node . . .   [..........................................        ]  84%  00:00:17
-Successfully installed: SDRAN
-```
+    ```shell
+    Please contact ONF(https://opennetworking.org/contact/) for username and password credentials that allow access to the sdran helm chart repo.
+    Enter sdran username: intel
+    Enter sdran password: <ONF Password>
+    Installing CM Xapp dependencies on SE Node . . .   [..................................................] 100%
+    Successfully installed: SDRAN
+    ```
   
 8. When the installation is complete, you shall see the message **Installation of package complete** with the installation status for each module.
 
- ```shell
-CM Xapp installation started. This might take upto 5-10 mins for getting docker images from registry
-Installing CM Xapp                                 [..................................................] 100%
-Successfully installed: CM Xapp
+    ```shell
+    CM Xapp installation started. This might take upto 1 mins
+    Installing CM Xapp                                 [..................................................] 100%
+    Successfully installed: CM Xapp
 
-Verifying CM Xapp installation in (xx.xx.xxx.xxx)  [..................................................] 100%
-Successfully installed Intelligent_Connection_Management_for_Automated_Handover took 4 minutes 0.73 seconds
-Installation of package complete
-***Recommended to reboot system after installation***
-+--------------------------+----------------------------------------------------------+---------+
-|            Id            |                          Module                          |  Status |
-+--------------------------+----------------------------------------------------------+---------+
-| 61d80982d534850021b1422d | Intelligent Connection Management for Automated Handover | SUCCESS |
-+--------------------------+----------------------------------------------------------+---------+
-```
+    Verifying CM Xapp installation in (xx.xxx.xxx.xxx)  [..................................................] 100%
+    Successfully installed Intelligent_Connection_Management_for_Automated_Handover took 13 minutes 58.31 seconds
+    Installation of package complete
+    ***Recommended to reboot system after installation***
+    +--------------------------+----------------------------------------------------------+---------+
+    |            Id            |                          Module                          |  Status |
+    +--------------------------+----------------------------------------------------------+---------+
+    | 619b8bceff6f230021e4409e | Intelligent Connection Management for Automated Handover | SUCCESS |
+    +--------------------------+----------------------------------------------------------+---------+
 3. Verify the installation with commands below
 
     ```shell
