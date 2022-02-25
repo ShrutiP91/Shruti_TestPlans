@@ -1388,7 +1388,7 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
    Note: Minimum active UE number should be 50 and maximum number of UE 100 or 150. The total running time will be more than 4 hours and 99% the total Handover request processing time should be less than 0.01 second. 
          If total Handover request processing time is more than 0.01 second, uninstall and reinstall the package and repeat the process.
 
-```shell
+ ```shell
 smartedge-open@@ubuntu-4b70b7ba43:~$ kubectl logs cm-xapp-6d99d58b5-2l4t2 -n smartedge-apps -c cm-xapp
 02/24/2022 05:11:57 AM Calling control req no 1 for UE : 9438026 Serving cell: 13842601454c002 target_cell 13842601454c001
 02/24/2022 05:11:57 AM Number of Active UEs: 14
@@ -1466,7 +1466,7 @@ smartedge-open@@ubuntu-4b70b7ba43:~$ kubectl logs cm-xapp-6d99d58b5-2l4t2 -n sma
 02/24/2022 05:12:11 AM Queue len: 1
 02/24/2022 05:12:11 AM Queue len: 1
 ```
-    Note: Handover request processing time should be less than 0.01 second
+     Note: Handover request processing time should be less than 0.01 second
 
 3. After latency measurement process, execute the following command to get xapp log
   
