@@ -163,15 +163,15 @@ Intel® Smart Edge Open Node
     --------Succesfuly installed prerequisites--------
     All dependencies met
     -------------------SYSTEM INFO--------------------
-    Package Name: Intelligent Connection Management for Automated Handover 2.0.0
+    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
     Product Name: Dell Inc. PowerEdge R750
     CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
     Memory Size: 504 GB
     Operating System: Ubuntu 20.04 LTS
-    Kernel Version: 5.13.0-27-generic
+    Kernel Version: 5.4.0-91-generic
     Accelerator: None
     CPU Utilization: 1.2%
-    Available Disk Space: 433 GB
+    Available Disk Space: 1651 GB
     Starting installation
     Downloading modules...
     Downloading component esb_common
@@ -765,15 +765,15 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
     com_ubuntu.list:3
     All dependencies met
     -------------------SYSTEM INFO--------------------
-    Package Name: Intelligent Connection Management for Automated Handover 2.0.0
+    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
     Product Name: Dell Inc. PowerEdge R750
     CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
     Memory Size: 504 GB
     Operating System: Ubuntu 20.04 LTS
-    Kernel Version: 5.13.0-27-generic
+    Kernel Version: 5.4.0-91-generic
     Accelerator: None
     CPU Utilization: 1.5%
-    Available Disk Space: 433 GB
+    Available Disk Space: 1649 GB
     Starting installation
     Downloading modules...
     Downloading component esb_common
@@ -962,15 +962,15 @@ Intelligent Connection Management for Automated Handover RI Installation should 
     ```shell
     All dependencies met
     -------------------SYSTEM INFO--------------------
-    Package Name: Intelligent Connection Management for Automated Handover 2.0.0
+    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
     Product Name: Dell Inc. PowerEdge R750
     CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
     Memory Size: 504 GB
     Operating System: Ubuntu 20.04 LTS
-    Kernel Version: 5.13.0-27-generic
+    Kernel Version: 5.4.0-91-generic
     Accelerator: None
     CPU Utilization: 1.5%
-    Available Disk Space: 433 GB
+    Available Disk Space: 1650 GB
     Starting installation
     Downloading modules...
     Downloading component esb_common
@@ -1012,15 +1012,15 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
     ...
     All dependencies met
     -------------------SYSTEM INFO--------------------
-    Package Name: Intelligent Connection Management for Automated Handover 2.0.0
+    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
     Product Name: Dell Inc. PowerEdge R750
     CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
     Memory Size: 504 GB
     Operating System: Ubuntu 20.04 LTS
-    Kernel Version: 5.13.0-27-generic
+    Kernel Version: 5.4.0-91-generic
     Accelerator: None
     CPU Utilization: 2.4%
-    Available Disk Space: 433 GB
+    Available Disk Space: 1648 GB
     Starting installation
     Downloading modules...
     Downloading component esb_common
@@ -1155,15 +1155,15 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
     ```shell
     All dependencies met
     -------------------SYSTEM INFO--------------------
-    Package Name: Intelligent Connection Management for Automated Handover 2.0.0
+    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
     Product Name: Dell Inc. PowerEdge R750
     CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
     Memory Size: 504 GB
     Operating System: Ubuntu 20.04 LTS
-    Kernel Version: 5.13.0-27-generic
+    Kernel Version: 5.4.0-91-generic
     Accelerator: None
     CPU Utilization: 1.5%
-    Available Disk Space: 433 GB
+    Available Disk Space: 1650 GB
     Starting installation
     Downloading modules...
     Downloading component esb_common
@@ -1388,85 +1388,85 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
    Note: Minimum active UE number should be 50 and maximum number of UE 100 or 150. The total running time will be more than 4 hours and 99% the total Handover request processing time should be less than 0.01 second. 
          If total Handover request processing time is more than 0.01 second, uninstall and reinstall the package and repeat the process.
 
- ```shell
-smartedge-open@@ubuntu-4b70b7ba43:~$ kubectl logs cm-xapp-6d99d58b5-2l4t2 -n smartedge-apps -c cm-xapp
-02/24/2022 05:11:57 AM Calling control req no 1 for UE : 9438026 Serving cell: 13842601454c002 target_cell 13842601454c001
-02/24/2022 05:11:57 AM Number of Active UEs: 14
-02/24/2022 05:11:57 AM Number of total UEs: 64
-02/24/2022 05:11:57 AM HO processing time: 0.0065 seconds
-02/24/2022 05:11:57 AM Queue len: 4
-02/24/2022 05:11:57 AM Queue len: 3
-02/24/2022 05:11:57 AM Calling control req no 2 for UE : 9104113 Serving cell: 13842601454c006 target_cell 13842601454c001
-02/24/2022 05:11:57 AM Number of Active UEs: 14
-02/24/2022 05:11:57 AM Number of total UEs: 64
-02/24/2022 05:11:57 AM HO processing time: 0.0088 seconds
-02/24/2022 05:11:57 AM Queue len: 1
-02/24/2022 05:11:57 AM Queue len: 1
-02/24/2022 05:11:57 AM Calling control req no 3 for UE : 7437845 Serving cell: 13842601454c002 target_cell 13842601454c006
-02/24/2022 05:11:57 AM Number of Active UEs: 14
-02/24/2022 05:11:57 AM Number of total UEs: 64
-02/24/2022 05:11:57 AM HO processing time: 0.0048 seconds
-02/24/2022 05:11:58 AM Queue len: 1
-02/24/2022 05:11:58 AM Calling control req no 4 for UE : 3697252 Serving cell: 13842601454c002 target_cell 13842601454c006
-02/24/2022 05:11:58 AM Number of Active UEs: 14
-02/24/2022 05:11:58 AM Number of total UEs: 64
-02/24/2022 05:11:58 AM HO processing time: 0.0057 seconds
-02/24/2022 05:11:58 AM Queue len: 1
-02/24/2022 05:11:58 AM Queue len: 1
-02/24/2022 05:11:58 AM Calling control req no 5 for UE : 1745205 Serving cell: 13842601454c001 target_cell 13842601454c006
-02/24/2022 05:11:58 AM Number of Active UEs: 14
-02/24/2022 05:11:58 AM Number of total UEs: 65
-02/24/2022 05:11:58 AM HO processing time: 0.0056 seconds
-02/24/2022 05:11:58 AM Queue len: 1
-02/24/2022 05:11:58 AM Calling control req no 6 for UE : 1542662 Serving cell: 13842601454c007 target_cell 13842601454c001
-02/24/2022 05:11:58 AM Number of Active UEs: 14
-02/24/2022 05:11:58 AM Number of total UEs: 65
-02/24/2022 05:11:58 AM HO processing time: 0.0068 seconds
-02/24/2022 05:11:58 AM Queue len: 1
-02/24/2022 05:11:59 AM Queue len: 1
-02/24/2022 05:11:59 AM Queue len: 1
-02/24/2022 05:12:01 AM Queue len: 1
-02/24/2022 05:12:01 AM Queue len: 1
-02/24/2022 05:12:02 AM Queue len: 1
-02/24/2022 05:12:02 AM Calling control req no 7 for UE : 4704529 Serving cell: 13842601454c002 target_cell 13842601454c001
-02/24/2022 05:12:02 AM Number of Active UEs: 14
-02/24/2022 05:12:02 AM Number of total UEs: 66
-02/24/2022 05:12:02 AM HO processing time: 0.0077 seconds
-02/24/2022 05:12:02 AM Queue len: 1
-02/24/2022 05:12:03 AM Queue len: 1
-02/24/2022 05:12:04 AM Queue len: 1
-02/24/2022 05:12:05 AM Queue len: 1
-02/24/2022 05:12:05 AM Total Indications: 12000 Periodic: 6936 Event-Based: 4992 RRC: 72
-02/24/2022 05:12:06 AM Queue len: 1
-02/24/2022 05:12:07 AM Queue len: 1
-02/24/2022 05:12:07 AM Calling control req no 8 for UE : 8560154 Serving cell: 13842601454c002 target_cell 13842601454c001
-02/24/2022 05:12:07 AM Number of Active UEs: 14
-02/24/2022 05:12:07 AM Number of total UEs: 67
-02/24/2022 05:12:07 AM HO processing time: 0.0064 seconds
-02/24/2022 05:12:07 AM Queue len: 1
-02/24/2022 05:12:08 AM Queue len: 1
-02/24/2022 05:12:08 AM Queue len: 1
-02/24/2022 05:12:08 AM Queue len: 1
-02/24/2022 05:12:08 AM Queue len: 1
-02/24/2022 05:12:09 AM Queue len: 1
-02/24/2022 05:12:09 AM Queue len: 1
-02/24/2022 05:12:09 AM Queue len: 1
-02/24/2022 05:12:09 AM Queue len: 1
-02/24/2022 05:12:09 AM Queue len: 1
-02/24/2022 05:12:09 AM Queue len: 1
-02/24/2022 05:12:10 AM Queue len: 1
-02/24/2022 05:12:10 AM Queue len: 1
-02/24/2022 05:12:10 AM Queue len: 1
-02/24/2022 05:12:10 AM Queue len: 1
-02/24/2022 05:12:10 AM Queue len: 1
-02/24/2022 05:12:10 AM Calling control req no 9 for UE : 7437845 Serving cell: 13842601454c006 target_cell 13842601454c003
-02/24/2022 05:12:11 AM Number of Active UEs: 15
-02/24/2022 05:12:11 AM Number of total UEs: 67
-02/24/2022 05:12:11 AM HO processing time: 0.0045 seconds
-02/24/2022 05:12:11 AM Queue len: 1
-02/24/2022 05:12:11 AM Queue len: 1
-```
-     Note: Handover request processing time should be less than 0.01 second
+	```shell
+	smartedge-open@@ubuntu-4b70b7ba43:~$ kubectl logs cm-xapp-6d99d58b5-2l4t2 -n smartedge-apps -c cm-xapp
+	02/24/2022 05:11:57 AM Calling control req no 1 for UE : 9438026 Serving cell: 13842601454c002 target_cell 13842601454c001
+	02/24/2022 05:11:57 AM Number of Active UEs: 14
+	02/24/2022 05:11:57 AM Number of total UEs: 64
+	02/24/2022 05:11:57 AM HO processing time: 0.0065 seconds
+	02/24/2022 05:11:57 AM Queue len: 4
+	02/24/2022 05:11:57 AM Queue len: 3
+	02/24/2022 05:11:57 AM Calling control req no 2 for UE : 9104113 Serving cell: 13842601454c006 target_cell 13842601454c001
+	02/24/2022 05:11:57 AM Number of Active UEs: 14
+	02/24/2022 05:11:57 AM Number of total UEs: 64
+	02/24/2022 05:11:57 AM HO processing time: 0.0088 seconds
+	02/24/2022 05:11:57 AM Queue len: 1
+	02/24/2022 05:11:57 AM Queue len: 1
+	02/24/2022 05:11:57 AM Calling control req no 3 for UE : 7437845 Serving cell: 13842601454c002 target_cell 13842601454c006
+	02/24/2022 05:11:57 AM Number of Active UEs: 14
+	02/24/2022 05:11:57 AM Number of total UEs: 64
+	02/24/2022 05:11:57 AM HO processing time: 0.0048 seconds
+	02/24/2022 05:11:58 AM Queue len: 1
+	02/24/2022 05:11:58 AM Calling control req no 4 for UE : 3697252 Serving cell: 13842601454c002 target_cell 13842601454c006
+	02/24/2022 05:11:58 AM Number of Active UEs: 14
+	02/24/2022 05:11:58 AM Number of total UEs: 64
+	02/24/2022 05:11:58 AM HO processing time: 0.0057 seconds
+	02/24/2022 05:11:58 AM Queue len: 1
+	02/24/2022 05:11:58 AM Queue len: 1
+	02/24/2022 05:11:58 AM Calling control req no 5 for UE : 1745205 Serving cell: 13842601454c001 target_cell 13842601454c006
+	02/24/2022 05:11:58 AM Number of Active UEs: 14
+	02/24/2022 05:11:58 AM Number of total UEs: 65
+	02/24/2022 05:11:58 AM HO processing time: 0.0056 seconds
+	02/24/2022 05:11:58 AM Queue len: 1
+	02/24/2022 05:11:58 AM Calling control req no 6 for UE : 1542662 Serving cell: 13842601454c007 target_cell 13842601454c001
+	02/24/2022 05:11:58 AM Number of Active UEs: 14
+	02/24/2022 05:11:58 AM Number of total UEs: 65
+	02/24/2022 05:11:58 AM HO processing time: 0.0068 seconds
+	02/24/2022 05:11:58 AM Queue len: 1
+	02/24/2022 05:11:59 AM Queue len: 1
+	02/24/2022 05:11:59 AM Queue len: 1
+	02/24/2022 05:12:01 AM Queue len: 1
+	02/24/2022 05:12:01 AM Queue len: 1
+	02/24/2022 05:12:02 AM Queue len: 1
+	02/24/2022 05:12:02 AM Calling control req no 7 for UE : 4704529 Serving cell: 13842601454c002 target_cell 13842601454c001
+	02/24/2022 05:12:02 AM Number of Active UEs: 14
+	02/24/2022 05:12:02 AM Number of total UEs: 66
+	02/24/2022 05:12:02 AM HO processing time: 0.0077 seconds
+	02/24/2022 05:12:02 AM Queue len: 1
+	02/24/2022 05:12:03 AM Queue len: 1
+	02/24/2022 05:12:04 AM Queue len: 1
+	02/24/2022 05:12:05 AM Queue len: 1
+	02/24/2022 05:12:05 AM Total Indications: 12000 Periodic: 6936 Event-Based: 4992 RRC: 72
+	02/24/2022 05:12:06 AM Queue len: 1
+	02/24/2022 05:12:07 AM Queue len: 1
+	02/24/2022 05:12:07 AM Calling control req no 8 for UE : 8560154 Serving cell: 13842601454c002 target_cell 13842601454c001
+	02/24/2022 05:12:07 AM Number of Active UEs: 14
+	02/24/2022 05:12:07 AM Number of total UEs: 67
+	02/24/2022 05:12:07 AM HO processing time: 0.0064 seconds
+	02/24/2022 05:12:07 AM Queue len: 1
+	02/24/2022 05:12:08 AM Queue len: 1
+	02/24/2022 05:12:08 AM Queue len: 1
+	02/24/2022 05:12:08 AM Queue len: 1
+	02/24/2022 05:12:08 AM Queue len: 1
+	02/24/2022 05:12:09 AM Queue len: 1
+	02/24/2022 05:12:09 AM Queue len: 1
+	02/24/2022 05:12:09 AM Queue len: 1
+	02/24/2022 05:12:09 AM Queue len: 1
+	02/24/2022 05:12:09 AM Queue len: 1
+	02/24/2022 05:12:09 AM Queue len: 1
+	02/24/2022 05:12:10 AM Queue len: 1
+	02/24/2022 05:12:10 AM Queue len: 1
+	02/24/2022 05:12:10 AM Queue len: 1
+	02/24/2022 05:12:10 AM Queue len: 1
+	02/24/2022 05:12:10 AM Queue len: 1
+	02/24/2022 05:12:10 AM Calling control req no 9 for UE : 7437845 Serving cell: 13842601454c006 target_cell 13842601454c003
+	02/24/2022 05:12:11 AM Number of Active UEs: 15
+	02/24/2022 05:12:11 AM Number of total UEs: 67
+	02/24/2022 05:12:11 AM HO processing time: 0.0045 seconds
+	02/24/2022 05:12:11 AM Queue len: 1
+	02/24/2022 05:12:11 AM Queue len: 1
+	```
+    Note: Handover request processing time should be less than 0.01 second
 
 3. After latency measurement process, execute the following command to get xapp log
   
@@ -1495,10 +1495,10 @@ smartedge-open@@ubuntu-4b70b7ba43:~$ kubectl logs cm-xapp-6d99d58b5-2l4t2 -n sma
 	
 Note: Minimum active UE number should be 50 and maximum number of UE 100 or 150. The total running time will be more than 4 hours and 99% the total Handover request    	processing time should be less than 0.01 second.
 Python file will store the numbers and when we run latest.py, it will plot a graphs to verify Handover request processing time.
-
-    ```shell	
-    smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp:$ python3 latest.py
-    ```		
+	 
+ ```shell
+ smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp1:$ python3 latest.py
+ ```
    ![image](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/b08d04c7-872d-4408-a709-a5cf8a575e12)
 
 
@@ -1521,49 +1521,49 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
 ### Test Steps
 
 Step 1. Uninstall the RI package by using the below command
-Note: For verifying latency measurement for python method, need to modify the parameters. so uninstall the edgesoftware and do the changes.
+	Note: For verifying latency measurement for python method, need to modify the parameters. so uninstall the edgesoftware and do the changes.
 
-        ```shell
-        ./edgesoftware uninstall -a 
-        ```
-```shell
-smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/Intelligent_Connection_Management$ ./edgesoftware uninstall -a
-Components to be uninstalled are :['Intelligent_Connection_Management_for_Automated_Handover']
-Uninstalling Intelligent_Connection_Management_for_Automated_Handover
-Uninstalling CM Xapp This might take upto 5 minutes.
-Cleaning up CM Xapp                                [............                                      ]  25%
-Successfully removed cm xapp from machine
-Cleaning up CM Xapp                                [.........................                         ]  50%  00:00:11
-Successfully removed sdran from machine
-Cleaning up CM Xapp                                [.....................................             ]  75%  00:00:07
-Successfully removed network policy from machine
-Cleaning up CM Xapp                                [..................................................] 100%
-Successfully uninstalled Intelligent_Connection_Management_for_Automated_Handover took 30.87 seconds
-Uninstall Finished
-+--------------------------+----------------------------------------------------------+---------+
-|            Id            |                          Module                          |  Status |
-+--------------------------+----------------------------------------------------------+---------+
-| 61d80982d534850021b1422d | Intelligent Connection Management for Automated Handover | SUCCESS |
-+--------------------------+----------------------------------------------------------+---------+
-```
+      ```shell
+      ./edgesoftware uninstall -a 
+      ```
+	```shell	
+	smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/Intelligent_Connection_Management$ ./edgesoftware uninstall -a
+	Components to be uninstalled are :['Intelligent_Connection_Management_for_Automated_Handover']
+	Uninstalling Intelligent_Connection_Management_for_Automated_Handover
+	Uninstalling CM Xapp This might take upto 5 minutes.
+	Cleaning up CM Xapp                                [............                                      ]  25%
+	Successfully removed cm xapp from machine
+	Cleaning up CM Xapp                                [.........................                         ]  50%  00:00:11
+	Successfully removed sdran from machine
+	Cleaning up CM Xapp                                [.....................................             ]  75%  00:00:07
+	Successfully removed network policy from machine
+	Cleaning up CM Xapp                                [..................................................] 100%
+	Successfully uninstalled Intelligent_Connection_Management_for_Automated_Handover took 30.87 seconds
+	Uninstall Finished
+	+--------------------------+----------------------------------------------------------+---------+
+	|            Id            |                          Module                          |  Status |
+	+--------------------------+----------------------------------------------------------+---------+
+	| 61d80982d534850021b1422d | Intelligent Connection Management for Automated Handover | SUCCESS |
+	+--------------------------+----------------------------------------------------------+---------+
+	```
    
 Step 2. Set the following parameters from below path
 	
-```shell
-Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automated_Handover_2.0.0/Intelligent_Connection_Management_for_Automated_Handover/CM-Xapp/cm-xapp/values.yaml
-```
+        ```shell
+        Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automated_Handover_2.0.0/Intelligent_Connection_Management_for_Automated_Handover/CM-Xapp/cm- xapp/values.yaml
+        ```
     
-```shell	
--parallelLoop=false --qValue=0 --preprocessing=true 
-```
+        ```shell	
+        -parallelLoop=false --qValue=0 --preprocessing=true 
+        ```
 	
 **Step 3 : Reinstall the Intelligent Connection Management for Automated Handover RI with valid product key **.
 
 1. Run the command below to install the Reference Implementation:
-
-    ```shell
-    $ ./edgesoftware install
-    ```
+   
+  ```shell
+  $ ./edgesoftware install
+  ```
 
 2. During the installation, user shall be prompted for the Product Key. The Product Key is contained in the email you received from Intel confirming your download.
  
@@ -1585,15 +1585,15 @@ Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automate
     --------Succesfuly installed prerequisites--------
     All dependencies met
     -------------------SYSTEM INFO--------------------
-    Package Name: Intelligent Connection Management for Automated Handover 2.0.0
+    Package Name: Intelligent Connection Management for Automated Handover 1.0.0
     Product Name: Dell Inc. PowerEdge R750
     CPU SKU: Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
     Memory Size: 504 GB
     Operating System: Ubuntu 20.04 LTS
-    Kernel Version: 5.13.0-27-generic
+    Kernel Version: 5.4.0-91-generic
     Accelerator: None
     CPU Utilization: 1.2%
-    Available Disk Space: 433 GB
+    Available Disk Space: 1651 GB
     Starting installation
     Downloading modules...
     Downloading component esb_common
@@ -1685,9 +1685,9 @@ Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automate
 	
 Step 5. Download the python package from the below repo
 
-      ```shell
-       git clone https://github.com/intel-innersource/networking.wireless.oran-ric.xapp-icmah/blob/master/ORAN_sim_ONF/latest.py
-      ```
+  ```shell	
+  git clone https://github.com/intel-innersource/networking.wireless.oran-ric.xapp-icmah/blob/master/ORAN_sim_ONF/latest.py
+  ```	
 Step 6. Verify the CMxApp pod status with the command below
 	
   ```shell
@@ -1705,8 +1705,10 @@ Step 7. Verify  Handover request processing time with CMxApp and RAN simulator p
 
    Note: Minimum active UE number should be 50 and maximum number of UE 100. The total running time will be more than 4 hours and 99% the total Handover request processing time should be less than  0.1 to 0.15 seconds. 
          
+  ```shell
+    smartedge-open@ubuntu-4b70b7ba43:~$ kubectl logs cm-xapp-6d99d58b5-2l4t2 -n smartedge-apps -c cm-xapp
+  ```
 ```shell
-smartedge-open@ubuntu-4b70b7ba43:~$ kubectl logs cm-xapp-6d99d58b5-2l4t2 -n smartedge-apps -c cm-xapp
 02/24/2022 11:00:40 AM Number of Cells: 7
 02/24/2022 11:00:40 AM Queue len: 19
 02/24/2022 11:00:40 AM Calling control req no 1 for UE : 2852134 Serving cell: 13842601454c001 target_cell 13842601454c002
