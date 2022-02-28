@@ -1362,7 +1362,7 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
 ## ITP/RI/ICMAH/12: Verify E2E Latency measurement of CMxApp meets the ORAN KPI using OPENVINO 
 
 ### Test Summary
-Verify E2E Latency measurement of Intelligent Connection Management for Automated Handover RI meets the ORAN KPI using OPENVINO method. Handover request processing time should be less than 0.01 second.
+Verify E2E Latency measurement of Intelligent Connection Management for Automated Handover RI meets the ORAN KPI using OPENVINO method. Handover request processing time should be in range less than 0.01 second.
     
 ### Prerequisites
   
@@ -1505,6 +1505,7 @@ Python file will store the numbers and when we run latest.py, it will plot a gra
 7. Validating the latency measurement
    
 Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.01 second. Towards it the user has to check UE/Handover request and sort the Handover request processing time in csv format file. per the tabulated info a graph shall be plotted to verify Handover request processing time.
+	
 Latest.py will generate HO process time,QueueSize, nUser, RSRP graphs. 
 HOprocesstime graph shows Handover request processing time for openvino, it should be less than 0.01 second. 
 QueueSize graph shows number of queue used and queue length.
@@ -1516,7 +1517,7 @@ QueueSize graph shows number of queue used and queue length.
 
 ### Test Summary
 
-Verify E2E Latency measurement of Intelligent Connection Management for Automated Handover RI meets the ORAN KPI using Python. 99% of occurences the Handover request processing time should be less than 0.1 to 0.15 seconds.
+Verify E2E Latency measurement of Intelligent Connection Management for Automated Handover RI meets the ORAN KPI using Python. 99% of occurences the Handover request processing time should be in range less than 0.1 to 0.15 seconds.
 
 ### Prerequisites
   
@@ -1525,7 +1526,7 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
 ### Test Steps
 
 Step 1. Uninstall the RI package by using the below command
-Note: For verifying latency measurement for python method, need to modify the parameters. so uninstall the edgesoftware and do the changes.
+Note: For verifying latency measurement using python method, need to modify the parameters. so uninstall the edgesoftware and do the changes.
 	
 ```shell
 ./edgesoftware uninstall -a
@@ -1796,6 +1797,7 @@ Note: Minimum active UE number should be 50 and maximum number of UE 100 or 150.
 Step 11. Validating the latency measurement
    
 Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.1 second. Towards it the user has to check UE/Handover request and sort the Handover request processing time in csv format file. per the tabulated info a graph shall be plotted to verify Handover request processing time.
+	
 Latest.py will generate HO process time,QueueSize, nUser, RSRP graphs. 
 HOprocesstime graph shows Handover request processing time for openvino, it should be less than 0.01 second. 
 QueueSize graph shows number of queue used and queue length.
