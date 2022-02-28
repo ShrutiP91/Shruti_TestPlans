@@ -1798,7 +1798,7 @@ Step 11. Validating the latency measurement
 Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.1 second. Towards it the user has to check UE/Handover request and sort the Handover request processing time in csv format file. per the tabulated info a graph shall be plotted to verify Handover request processing time.
 	
 Latest.py will generate HO process time,QueueSize, nUser, RSRP graphs. 
-HOprocesstime graph shows Handover request processing time for openvino, it should be less than 0.01 second. 
+HOprocesstime graph shows Handover request processing time for python, it should be in range less than 0.1 to 0.15 seconds. 
 QueueSize graph shows number of queue used and queue length.
 
 ![HOprocesstime](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/c8056fd7-fca0-44ba-a55f-1873fa6568a7)
