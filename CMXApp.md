@@ -1523,9 +1523,9 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
 Step 1. Uninstall the RI package by using the below command
 Note: For verifying latency measurement for python method, need to modify the parameters. so uninstall the edgesoftware and do the changes.
 	
-```shell
-./edgesoftware uninstall -a
-```
+	```shell
+	./edgesoftware uninstall -a
+	```
 ```shell	
 smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/Intelligent_Connection_Management$ ./edgesoftware uninstall -a
 Components to be uninstalled are :['Intelligent_Connection_Management_for_Automated_Handover']
