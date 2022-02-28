@@ -1559,7 +1559,7 @@ Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automate
 parallelLoop=false --qValue=0 --preprocessing=true 
 ```
 	
-**Step 3 : Reinstall the Intelligent Connection Management for Automated Handover RI with valid product key **.
+Step 3 : Reinstall the Intelligent Connection Management for Automated Handover RI with valid product key.
 
 1. Run the command below to install the Reference Implementation:
    
