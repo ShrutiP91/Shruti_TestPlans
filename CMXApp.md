@@ -1499,9 +1499,8 @@ Python file will store the numbers and when we run latest.py, it will plot a gra
  ```shell
  smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp1:$ python3 latest.py
  ```
-   ![image](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/b08d04c7-872d-4408-a709-a5cf8a575e12)
-
-
+   ![image](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/888556d4-1b20-4e25-b586-71baafc10e87)
+	
 7. Validating the latency measurement
    
 Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.01 second. Towards it the user has to check UE/Handover request and sort the Handover request processing time in csv format file. per the tabulated info a graph shall be plotted to verify Handover request processing time.
@@ -1523,37 +1522,37 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
 Step 1. Uninstall the RI package by using the below command
 Note: For verifying latency measurement for python method, need to modify the parameters. so uninstall the edgesoftware and do the changes.
 	
-	```shell
-	./edgesoftware uninstall -a
-	```
-	```shell	
-	smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/Intelligent_Connection_Management$ ./edgesoftware uninstall -a
-	Components to be uninstalled are :['Intelligent_Connection_Management_for_Automated_Handover']
-	Uninstalling Intelligent_Connection_Management_for_Automated_Handover
-	Uninstalling CM Xapp This might take upto 5 minutes.
-	Cleaning up CM Xapp                                [............                                      ]  25%
-	Successfully removed cm xapp from machine
-	Cleaning up CM Xapp                                [.........................                         ]  50%  00:00:11
-	Successfully removed sdran from machine
-	Cleaning up CM Xapp                                [.....................................             ]  75%  00:00:07
-	Successfully removed network policy from machine
-	Cleaning up CM Xapp                                [..................................................] 100%
-	Successfully uninstalled Intelligent_Connection_Management_for_Automated_Handover took 30.87 seconds
-	Uninstall Finished
-	+--------------------------+----------------------------------------------------------+---------+
-	|            Id            |                          Module                          |  Status |
-	+--------------------------+----------------------------------------------------------+---------+
-	| 61d80982d534850021b1422d | Intelligent Connection Management for Automated Handover | SUCCESS |
-	+--------------------------+----------------------------------------------------------+---------+
-	```
-
-	Step 2. Set the following parameters from below path
-	```shell
-	Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automated_Handover_2.0.0/Intelligent_Connection_Management_for_Automated_Handover/CM-Xapp/cm- xapp/values.yaml
-	```
-	```shell	
-	parallelLoop=false --qValue=0 --preprocessing=true 
-	```
+```shell
+./edgesoftware uninstall -a
+```
+```shell	
+smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/Intelligent_Connection_Management$ ./edgesoftware uninstall -a
+Components to be uninstalled are :['Intelligent_Connection_Management_for_Automated_Handover']
+Uninstalling Intelligent_Connection_Management_for_Automated_Handover
+Uninstalling CM Xapp This might take upto 5 minutes.
+Cleaning up CM Xapp                                [............                                      ]  25%
+Successfully removed cm xapp from machine
+Cleaning up CM Xapp                                [.........................                         ]  50%  00:00:11
+Successfully removed sdran from machine
+Cleaning up CM Xapp                                [.....................................             ]  75%  00:00:07
+Successfully removed network policy from machine
+Cleaning up CM Xapp                                [..................................................] 100%
+Successfully uninstalled Intelligent_Connection_Management_for_Automated_Handover took 30.87 seconds
+Uninstall Finished
++--------------------------+----------------------------------------------------------+---------+
+|            Id            |                          Module                          |  Status |
++--------------------------+----------------------------------------------------------+---------+
+| 61d80982d534850021b1422d | Intelligent Connection Management for Automated Handover | SUCCESS |
++--------------------------+----------------------------------------------------------+---------+
+```
+   
+Step 2. Set the following parameters from below path
+```shell
+Intelligent_Connection_Management/Intelligent_Connection_Management_for_Automated_Handover_2.0.0/Intelligent_Connection_Management_for_Automated_Handover/CM-Xapp/cm- xapp/values.yaml
+```
+```shell	
+parallelLoop=false --qValue=0 --preprocessing=true 
+```
 	
 **Step 3 : Reinstall the Intelligent Connection Management for Automated Handover RI with valid product key **.
 
@@ -1787,8 +1786,7 @@ Step 10. Execute the following command from Python path
  ```shell
  smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp1:$ python3 latest.py
  ```
- ![image](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/738863d7-a8b2-4b1c-b043-74daab6c789a)
-
+ ![image](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/31663f2f-34e1-4b89-9b0f-26668c2ac88f)
 Step 11. Validating the latency measurement
    
   Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.1 second. Towards it the user has to check UE/Handover request and sort the Handover request processing time in csv format file. per the tabulated info a graph shall be plotted to verify Handover request processing time. 
