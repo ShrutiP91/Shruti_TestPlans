@@ -1509,7 +1509,6 @@ Latency measurements are deduced based on Handover request processing time and t
 Latest.py will generate HO process time,QueueSize, nUser, RSRP graphs. 
 HOprocesstime graph shows Handover request processing time for openvino, it should be less than 0.01 second. 
 QueueSize graph shows number of queue used and queue length.
-
 ![HOprocesstime_1](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/bbec4eea-da71-4da9-b9d2-18381c61cec4)
 ![QueueSize](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/7f623adf-b138-4020-a24c-a7351f55eebf)
 
