@@ -1493,9 +1493,9 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
 	
 6. Execute the following command from Python path
 		 
- ```shell
- smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp1:$ python3 latest.py
- ```
+   ```shell
+   smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp1:$ python3 latest.py
+   ```
 Note: Minimum active UE number should be 50 and maximum number of UE 100 or 150. The total running time will be more than 4 hours and 99% the total Handover request    	processing time should be less than 0.01 second.
 Python file will store the numbers and when we run latest.py, it will plot a graphs to verify Handover request processing time.
 	
