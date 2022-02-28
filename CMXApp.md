@@ -1482,7 +1482,7 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
     ```shell
    smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp$ kubectl cp smartedge-apps/cm-xapp-6d99d58b5-2l4t2:/home/openvino/xapp.log ./log.txt
    Defaulted container "cm-xapp" out of: cm-xapp, onos-proxy
-   smartedge-open@esi101:/home/smartedge-open/dek/tmp$ ls
+   smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp$ ls
     log.txt
      ```
 5. Download the Python package from the below repo
@@ -1770,7 +1770,7 @@ Step 7. Verify  Handover request processing time with CMxApp and RAN simulator p
 Step 8. After latency measurement process, execute the following command to get xapp log
   
 ```shell
-smartedge-open@esi101:/home/smartedge-open/Intelligent_Connection_Management$ kubectl -n smartedge-apps exec -it cm-xapp-6d99d58b5-2l4t2  -- bash
+smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/Intelligent_Connection_Management$ kubectl -n smartedge-apps exec -it cm-xapp-6d99d58b5-2l4t2  -- bash
 Defaulted container "cm-xapp" out of: cm-xapp, onos-proxy
 openvino@cm-xapp-77d4995c8d-98mw7:~$ ls
 HOprocess.py  __pycache__     cDQNandGNN.py  databaseProcess.py  oranHandOverEnv.py       queueManagement.py  xApp_ONF.py
@@ -1779,9 +1779,9 @@ OpenVINO      cActivation.py  csrc           onos_sdk_client.so  pygo_mediation_
 Step 9. Verify the xapp log file name using below command and dump logs as log.txt
       
 ```shell
-smartedge-open@esi101:/home/smartedge-open/dek/tmp1$ kubectl cp smartedge-apps/cm-xapp-6d99d58b5-2l4t2:/home/openvino/xapp.log ./log.txt
+smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp1$ kubectl cp smartedge-apps/cm-xapp-6d99d58b5-2l4t2:/home/openvino/xapp.log ./log.txt
 Defaulted container "cm-xapp" out of: cm-xapp, onos-proxy
-smartedge-open@esi101:/home/smartedge-open/dek/tmp1$ ls
+smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp1$ ls
 log.txt
 ```
 Step 10. Execute the following command from Python path
