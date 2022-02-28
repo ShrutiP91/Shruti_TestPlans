@@ -1492,20 +1492,25 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
     ```	
 	
 6. Execute the following command from Python path
-	
-Note: Minimum active UE number should be 50 and maximum number of UE 100 or 150. The total running time will be more than 4 hours and 99% the total Handover request    	processing time should be less than 0.01 second.
-Python file will store the numbers and when we run latest.py, it will plot a graphs to verify Handover request processing time.
-	 
+		 
  ```shell
  smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp1:$ python3 latest.py
  ```
-   ![image](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/888556d4-1b20-4e25-b586-71baafc10e87)
+Note: Minimum active UE number should be 50 and maximum number of UE 100 or 150. The total running time will be more than 4 hours and 99% the total Handover request    	processing time should be less than 0.01 second.
+Python file will store the numbers and when we run latest.py, it will plot a graphs to verify Handover request processing time.
+	
+   ![tmpedit](https://user-images.githubusercontent.com/93578898/155994366-67cb4dea-cd4f-4521-a129-34b39d848c7f.PNG)
+
 	
 7. Validating the latency measurement
    
 Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.01 second. Towards it the user has to check UE/Handover request and sort the Handover request processing time in csv format file. per the tabulated info a graph shall be plotted to verify Handover request processing time.
-  ![HOprocesstime_1](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/bbec4eea-da71-4da9-b9d2-18381c61cec4)
-  ![QueueSize](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/7f623adf-b138-4020-a24c-a7351f55eebf)
+Latest.py will generate HO process time,QueueSize, nUser, RSRP graphs. 
+HOprocesstime graph shows Handover request processing time for openvino, it should be less than 0.01 second. 
+QueueSize graph shows number of queue used and queue length.
+
+![HOprocesstime_1](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/bbec4eea-da71-4da9-b9d2-18381c61cec4)
+![QueueSize](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/7f623adf-b138-4020-a24c-a7351f55eebf)
 
 ## ITP/RI/ICMAH/13: Verify E2E Latency measurement of CMxApp meets the ORAN KPI using Python
 
@@ -1779,17 +1784,22 @@ smartedge-open@esi101:/home/smartedge-open/dek/tmp1$ ls
 log.txt
 ```
 Step 10. Execute the following command from Python path
-
-    Note: Minimum active UE number should be 50 and maximum number of UE 100 or 150. The total running time will be more than 4 hours and 99% the total Handover request processing time should be less than  0.1 to 0.15 seconds.
-         Python file will store the numbers and when we run latest.py it will plot a graphs to verify Handover request processing time.
-
+	
  ```shell
  smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp1:$ python3 latest.py
  ```
- ![image](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/31663f2f-34e1-4b89-9b0f-26668c2ac88f)
+Note: Minimum active UE number should be 50 and maximum number of UE 100 or 150. The total running time will be more than 4 hours and 99% the total Handover request processing time should be less than  0.1 to 0.15 seconds.
+         Python file will store the numbers and when we run latest.py it will plot a graphs to verify Handover request processing time.
+	
+![tmp1edit](https://user-images.githubusercontent.com/93578898/155994678-8d42b304-8ed7-44f8-bc58-7de2848d188f.PNG)
+
 Step 11. Validating the latency measurement
    
-  Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.1 second. Towards it the user has to check UE/Handover request and sort the Handover request processing time in csv format file. per the tabulated info a graph shall be plotted to verify Handover request processing time. 
-  ![HOprocesstime](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/c8056fd7-fca0-44ba-a55f-1873fa6568a7)
-  ![QueueSize](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/fee5b0d2-a475-485b-b2fc-22fc2b82edef)
+Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.1 second. Towards it the user has to check UE/Handover request and sort the Handover request processing time in csv format file. per the tabulated info a graph shall be plotted to verify Handover request processing time.
+Latest.py will generate HO process time,QueueSize, nUser, RSRP graphs. 
+HOprocesstime graph shows Handover request processing time for openvino, it should be less than 0.01 second. 
+QueueSize graph shows number of queue used and queue length.
+
+![HOprocesstime](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/c8056fd7-fca0-44ba-a55f-1873fa6568a7)
+![QueueSize](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/fee5b0d2-a475-485b-b2fc-22fc2b82edef)
 
