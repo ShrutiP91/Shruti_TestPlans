@@ -1523,7 +1523,6 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
 Step 1. Uninstall the RI package by using the below command
 Note: For verifying latency measurement for python method, need to modify the parameters. so uninstall the edgesoftware and do the changes.
 
-
     ```shell
     ./edgesoftware uninstall -a
     ```
