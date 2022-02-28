@@ -1800,7 +1800,6 @@ Latency measurements are deduced based on Handover request processing time and t
 Latest.py will generate HO process time,QueueSize, nUser, RSRP graphs. 
 HOprocesstime graph shows Handover request processing time for python, it should be in range less than 0.1 to 0.15 seconds. 
 QueueSize graph shows number of queue used and queue length.
-
 ![HOprocesstime](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/c8056fd7-fca0-44ba-a55f-1873fa6568a7)
 ![QueueSize](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/fee5b0d2-a475-485b-b2fc-22fc2b82edef)
 
