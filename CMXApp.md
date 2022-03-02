@@ -54,7 +54,7 @@
   - [Prerequisites](#prerequisites-10)
   - [Test steps](#test-steps-10)
   
-- [ITP/RI/ICMAH/12: Verify E2E Latency measurement of CMxApp meets the ORAN KPI using OPENVINO](#itpriicmah12-Verify-E2E-Latency-measurement-of-CMxApp-meets-the-ORAN-KPI-using-OPENVINO)
+- [ITP/RI/ICMAH/12: Verify E2E Latency measurement of CMxApp meets the ORAN KPI using OpenVINO](#itpriicmah12-Verify-E2E-Latency-measurement-of-CMxApp-meets-the-ORAN-KPI-using-OpenVINO)
   - [Test Summary](#test-summary-11)
   - [Prerequisites](#prerequisites-11)
   - [Test steps](#test-steps-11)
@@ -1359,10 +1359,10 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
       +--------------------------+----------------------------------------------------------+--------+
       ```
 
-## ITP/RI/ICMAH/12: Verify E2E Latency measurement of CMxApp meets the ORAN KPI using OPENVINO 
+## ITP/RI/ICMAH/12: Verify E2E Latency measurement of CMxApp meets the ORAN KPI using OpenVINO 
 
 ### Test Summary
-Verify E2E Latency measurement of Intelligent Connection Management for Automated Handover RI meets the ORAN KPI using OPENVINO method. Handover request processing time should be in range less than 0.01 second.
+Verify E2E Latency measurement of Intelligent Connection Management for Automated Handover RI meets the ORAN KPI using OpenVINO method. Handover request processing time should be in range less than 0.01 second.
     
 ### Prerequisites
   
@@ -1507,7 +1507,7 @@ Python file will store the numbers and when we run latest.py, it will plot a gra
 Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.01 second. Towards it the user has to check UE/Handover request and sort the Handover request processing time in csv format file. per the tabulated info a graph shall be plotted to verify Handover request processing time.
 	
 Latest.py will generate HO process time,QueueSize, nUser, RSRP graphs. 
-HOprocesstime graph shows Handover request processing time for openvino, it should be less than 0.01 second. Here sample index is number of time the Handover request initiated, it's sequence number of control request for Handover we need to check timing from start to end.
+HOprocesstime graph shows Handover request processing time for OpenVINO, it should be less than 0.01 second. Here sample index is number of time the Handover request initiated, it's sequence number of control request for Handover we need to check timing from start to end.
 QueueSize graph shows number of queue used and queue length. Here sample index is number of time the queue length initiated, it's sequence number of control request for queue we need to check timing from start to end. Both the graphs are used to analyse the data.
 ![HOprocesstime_1](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/bbec4eea-da71-4da9-b9d2-18381c61cec4)
 ![QueueSize](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/7f623adf-b138-4020-a24c-a7351f55eebf)
