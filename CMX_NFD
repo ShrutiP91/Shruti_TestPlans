@@ -63,6 +63,11 @@
   - [Test Summary](#test-summary-12)
   - [Prerequisites](#prerequisites-12)
   - [Test steps](#test-steps-12)
+  
+ - [ITP/RI/ICMAH/14: Verify NFD feature funtionality after ICMAH RI Installation](#itpriicmah14-Verify-NFD-feature-funtionality-after-ICMAH-RI-Installation)
+  - [Test Summary](#test-summary-13)
+  - [Prerequisites](#prerequisites-13)
+  - [Test steps](#test-steps-13)
  
 ## ITP/RI/ICMAH/01: Intelligent Connection Management for Automated Handover RI Installation and Verification
 
@@ -1801,4 +1806,191 @@ Latest.py will generate HO process time,QueueSize, nUser, RSRP graphs.
 HOprocesstime graph shows Handover request processing time for python, it should be in range less than 0.1 to 0.15 seconds. Here sample index is number of time the Handover request initiated, it's sequence number of control request for Handover we need to check timing from start to end.
 QueueSize graph shows number of queue used and queue length. Here sample index is number of time the queue length initiated, it's sequence number of control request for queue we need to check timing from start to end. Both the graphs are used to analyse the data.
 ![HOprocesstime](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/c8056fd7-fca0-44ba-a55f-1873fa6568a7)![QueueSize](https://github.com/intel-innersource/applications.services.smart-edge-open.test-validation/assets/93578898/fee5b0d2-a475-485b-b2fc-22fc2b82edef)
+
+## ITP/RI/ICMAH/14: Verify NFD feature funtionality after ICMAH RI Installation
+
+### Test Summary
+
+After installation of Intelligent Connection Management for Automated Handover RI, verify whether NFD funtionality is successfully applied for application pods.
+
+### Prerequisites
+  
+Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Connection Management for Automated Handover RI Installation and Verification](#itpriicmah01-Intelligent-Connection-Management-for-Automated-Handover-RI-Installation-and-Verification)
+
+### Test Steps
+
+1. If ICMAH is installed, running the following command should prompt below output
+
+```shell
+smartedge-open@ubuntu-4b70b7ba43:~$ kubectl -n smartedge-apps get pod
+NAME                             READY   STATUS    RESTARTS   AGE
+cm-xapp-cbb7b9499-gtjfp          2/2     Running   0          16h
+onos-cli-764d9697fb-2fltz        1/1     Running   0          20h
+onos-consensus-store-0           1/1     Running   0          20h
+onos-e2t-df496c8cd-hdgcr         3/3     Running   0          20h
+onos-topo-79f7c5c54d-d4s9k       3/3     Running   0          20h
+onos-uenib-6f7466c87f-v2jgm      3/3     Running   0          20h
+ran-simulator-84f849f6d6-fk49t   1/1     Running   0          20h
+```
+
+2. Verify NFD feature by describing any ICMAH application pod. Node-selectors details should promt as below
+	
+```shell
+smartedge-open@ubuntu-4b70b7ba43:~$ kubectl describe pod onos-topo-79f7c5c54d-d4s9k -n smartedge-apps
+Name:         onos-topo-79f7c5c54d-d4s9k
+Namespace:    smartedge-apps
+Priority:     0
+Node:         esixx/xx.xx.xxx.xx
+Start Time:   Thu, 03 Mar 2022 14:29:18 +0530
+Labels:       app=onos
+              app.kubernetes.io/instance=sd-ran
+              app.kubernetes.io/name=onos-topo
+              name=onos-topo
+              pod-template-hash=79f7c5c54d
+              resource=onos-topo
+              type=topo
+Annotations:  broker.atomix.io/inject: true
+              broker.atomix.io/status: injected
+              cni.projectcalico.org/containerID: 30962b5668aefbd5d1841e0bea1cb35169fcb6858230ce2e4b03f39c31517816
+              cni.projectcalico.org/podIP: 10.245.78.236/32
+              cni.projectcalico.org/podIPs: 10.245.78.236/32
+              raft.storage.atomix.io/inject: true
+              raft.storage.atomix.io/status: injected
+              seccomp.security.alpha.kubernetes.io/pod: unconfined
+              v2beta2.raft.storage.atomix.io/port: 5680
+              v2beta2.raft.storage.atomix.io/status: injected
+Status:       Running
+IP:           10.245.78.236
+IPs:
+  IP:           10.245.78.236
+Controlled By:  ReplicaSet/onos-topo-79f7c5c54d
+Containers:
+  onos-topo:
+    Container ID:  docker://6525e105fccceb25759e502d3107c50d5962c4af602cc195ba521ac93b894d38
+    Image:         onosproject/onos-topo:v0.8.13
+    Image ID:      docker-pullable://onosproject/onos-topo@sha256:7b3e2c24b498fbe7a43879046e44dc6ed0eb9ded09ddf4b5c2420624fd38000e
+    Port:          5150/TCP
+    Host Port:     0/TCP
+    Args:
+      -caPath=/etc/onos/certs/tls.cacrt
+      -keyPath=/etc/onos/certs/tls.key
+      -certPath=/etc/onos/certs/tls.crt
+    State:          Running
+      Started:      Thu, 03 Mar 2022 14:29:20 +0530
+    Ready:          True
+    Restart Count:  0
+    Liveness:       tcp-socket :5150 delay=10s timeout=1s period=10s #success=1 #failure=3
+    Readiness:      tcp-socket :5150 delay=10s timeout=1s period=10s #success=1 #failure=3
+    Startup:        tcp-socket :5150 delay=0s timeout=1s period=5s #success=1 #failure=60
+    Environment:
+      POD_NAMESPACE:      smartedge-apps (v1:metadata.namespace)
+      POD_NAME:           onos-topo-79f7c5c54d-d4s9k (v1:metadata.name)
+      SERVICE_NAMESPACE:  smartedge-apps (v1:metadata.namespace)
+      OIDC_SERVER_URL:
+      SERVICE_NAME:       onos-topo
+      NODE_NAME:           (v1:spec.nodeName)
+    Mounts:
+      /etc/onos/certs from secret (ro)
+      /etc/onos/config from config (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-w97cv (ro)
+  atomix-broker:
+    Container ID:   docker://e3fc61ee2ca027237fe256a4b0e0f9462e9b363908739f6e6a49afd084ce73f9
+    Image:          atomix/atomix-broker:v0.6.1
+    Image ID:       docker-pullable://atomix/atomix-broker@sha256:c9cbbcfde2758bebe3f9f39b6a59497d28c3679bf2f0672ee58c235d6b050690
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Thu, 03 Mar 2022 14:29:21 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:
+      ATOMIX_BROKER_NAMESPACE:  smartedge-apps (v1:metadata.namespace)
+      ATOMIX_BROKER_NAME:       onos-topo-79f7c5c54d-d4s9k (v1:metadata.name)
+      ATOMIX_BROKER_NODE:        (v1:spec.nodeName)
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-w97cv (ro)
+  driver-raft-v2beta2:
+    Container ID:  docker://c629f32a2010355dcc7eb1a49341afcd806c5e89e5cf9c62b025a1f5361c253e
+    Image:         atomix/atomix-raft-storage-driver:v0.9.8
+    Image ID:      docker-pullable://atomix/atomix-raft-storage-driver@sha256:7bbbb846ba3e366297a67bd1c1425a8297403659ab639376d995ea511253494f
+    Port:          5680/TCP
+    Host Port:     0/TCP
+    Args:
+      :5680
+    State:          Running
+      Started:      Thu, 03 Mar 2022 14:29:21 +0530
+    Ready:          True
+    Restart Count:  0
+    Environment:
+      ATOMIX_DRIVER_TYPE:       v2beta2.raft.storage.atomix.io
+      ATOMIX_DRIVER_NAMESPACE:  smartedge-apps
+      ATOMIX_DRIVER_NAME:
+      ATOMIX_DRIVER_NODE:        (v1:spec.nodeName)
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-w97cv (ro)
+Readiness Gates:
+  Type          Status
+  AtomixReady   True
+Conditions:
+  Type              Status
+  AtomixReady       True
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  config:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      onos-topo-config
+    Optional:  false
+  secret:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  onos-topo-secret
+    Optional:    false
+  kube-api-access-w97cv:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                Age                From               Message
+  ----     ------                ----               ----               -------
+  Normal   Scheduled             20h                default-scheduler  Successfully assigned smartedge-apps/onos-topo-79f7c5c54d-d4s9k to esi101
+  Normal   Pulled                20h                kubelet            Container image "onosproject/onos-topo:v0.8.13" already present on machine
+  Normal   Started               20h                kubelet            Started container onos-topo
+  Normal   Pulled                20h                kubelet            Container image "atomix/atomix-broker:v0.6.1" already present on machine
+  Normal   Created               20h                kubelet            Created container atomix-broker
+  Normal   Created               20h                kubelet            Created container onos-topo
+  Normal   Started               20h                kubelet            Started container driver-raft-v2beta2
+  Normal   Started               20h                kubelet            Started container atomix-broker
+  Normal   Pulled                20h                kubelet            Container image "atomix/atomix-raft-storage-driver:v0.9.8" already present on machine
+  Normal   Created               20h                kubelet            Created container driver-raft-v2beta2
+  Warning  Unhealthy             20h (x2 over 20h)  kubelet            Startup probe failed: dial tcp 10.245.78.236:5150: connect: connection refused
+  Normal   StartingAgent         20h                atomix             Starting agent for store 'onos-consensus-store'
+  Normal   StartedAgent          20h                atomix             Started agent for store 'onos-consensus-store'
+  Normal   CreatingProxy         20h                atomix             Creating proxy for primitive 'onos-topo-objects'
+  Normal   CreatedProxy          20h                atomix             Created proxy to 'onos-consensus-store' for primitive 'onos-topo-objects'
+  Normal   RegisteringPrimitive  20h                atomix             Registering primitive 'onos-topo-objects'
+  Normal   RegisteredPrimitive   20h                atomix             Registered primitive 'onos-topo-objects' with broker
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
