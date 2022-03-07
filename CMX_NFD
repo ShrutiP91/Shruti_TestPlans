@@ -1501,15 +1501,15 @@ Start RI Installation (./edgesoftware install) [ITP/RI/ICMAH/01: Intelligent Con
    ```shell
    smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp1:$ python3 latest.py
    ```
-Note: Minimum active UE number should be 50 and maximum number of UE 100 or 150. The total running time will be more than 4 hours and 99% the total Handover request    	processing time should be less than 0.01 second.
-Python file will store the numbers and when we run latest.py, it will plot a graphs to verify Handover request processing time.
+Note: Minimum active UE number should be 50 and maximum number of UE is 140. The total running time will be more than 4 hours and 99% the total Handover request processing time should be less than 0.01 second.
+Python file will store the numbers and when we run latest.py, it will plot a graph to verify Handover request processing time.
 	
    ![tmpedit](https://user-images.githubusercontent.com/93578898/155994366-67cb4dea-cd4f-4521-a129-34b39d848c7f.PNG)
 
 	
 7. Validating the latency measurement
    
-Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.01 second. Towards it the user has to check UE/Handover request and sort the Handover request processing time in csv format file. per the tabulated info a graph shall be plotted to verify Handover request processing time.
+Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.01 second. Towards it the user has to check UE/Handover request time.
 	
 Latest.py will generate HO process time,QueueSize, nUser, RSRP graphs. 
 HOprocesstime graph shows Handover request processing time for OpenVINO, it should be less than 0.01 second. Here sample index is number of time the Handover request initiated, it's sequence number of control request for Handover we need to check timing from start to end.
@@ -1793,14 +1793,14 @@ Step 10. Execute the following command from Python path
  ```shell
  smartedge-open@ubuntu-4b70b7ba43:/home/smartedge-open/dek/tmp1:$ python3 latest.py
  ```
-Note: Minimum active UE number should be 50 and maximum number of UE 100 or 150. The total running time will be more than 4 hours and 99% the total Handover request processing time should be less than  0.1 to 0.15 seconds.
+Note: Minimum active UE number should be 50 and maximum number of UE is 140. The total running time will be more than 4 hours and 99% the total Handover request processing time should be less than  0.1 to 0.15 seconds.
          Python file will store the numbers and when we run latest.py it will plot a graphs to verify Handover request processing time.
 	
 ![tmp1edit](https://user-images.githubusercontent.com/93578898/155994678-8d42b304-8ed7-44f8-bc58-7de2848d188f.PNG)
 
 Step 11. Validating the latency measurement
    
-Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.1 second. Towards it the user has to check UE/Handover request and sort the Handover request processing time in csv format file. per the tabulated info a graph shall be plotted to verify Handover request processing time.
+Latency measurements are deduced based on Handover request processing time and the expectation is to be less than 0.1 second. Towards it the user has to check UE/Handover request time.
 	
 Latest.py will generate HO process time,QueueSize, nUser, RSRP graphs. 
 HOprocesstime graph shows Handover request processing time for python, it should be in range less than 0.1 to 0.15 seconds. Here sample index is number of time the Handover request initiated, it's sequence number of control request for Handover we need to check timing from start to end.
