@@ -1899,5 +1899,3 @@ Events:
   Normal  Created    20h   kubelet            Created container onos-proxy
   Normal  Started    20h   kubelet            Started container onos-proxy
 ```shell
-
-
